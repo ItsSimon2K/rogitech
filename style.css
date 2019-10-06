@@ -393,6 +393,18 @@ a {
 
 /* #endregion */
 
+/* #region Card */
+
+.card {
+  padding: 1rem;
+}
+
+.card__text {
+
+}
+
+/* #endregion */
+
 /* #region 6 grid system */
 
 .row {
@@ -403,6 +415,7 @@ a {
 }
 
 .row--center {
+  align-content: center;
   align-items: center;
 }
 
@@ -574,6 +587,104 @@ a {
 }
 
 /* #endregion */
+
+/* #region Helpers */
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.my-1 {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-4 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.my-5 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.py-1 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-4 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* #endregion */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.hero__bg--blur {
+  filter: blur(5px);
+  transition: filter .5s var(--ease);
+}
+
+.hero:hover .hero__bg--blur {
+  filter: blur(15px);
+}
 
 /* #region Breakpoints */
 

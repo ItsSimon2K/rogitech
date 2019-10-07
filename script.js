@@ -5,12 +5,13 @@
  * 
  * Notes:
  * - Vanilla JS
+ * - ES6 syntax
  * - No semicolon (ASI)
  * - JSDoc comments
  * - Namespaced
  */
 (() => {
-  window.addEventListener('load', function () {
+  window.addEventListener('load', () => {
     /**
      * Carousel
      * 
@@ -21,11 +22,11 @@
      * - `controls` contains the `forward` and `backward` buttons
      * 
      * Data:
-     * - `data-carousel-auto-slide-interval`: Time between auto sliding in milliseconds. Set 0 to disable. (Default: 0)
+     * - `data-carousel-auto-slide-interval`: Time between auto sliding in ms. Set 0 to disable. (Default: 0)
      * - `data-carousel-auto-slide-direction`: Auto slide direction, `forward` or `backward`. (Default: `forward`)
      * - `data-carousel-disable-auto-on-hover`: Temporarily stops auto sliding when mouse hover. (Default: true)
      */
-    document.querySelectorAll('.carousel').forEach(function (carousel) {
+    document.querySelectorAll('.carousel').forEach((carousel) => {
       const autoSlideInterval = +carousel.dataset.carouselAutoSlideInterval || 0
       const autoSlideDirection = carousel.dataset.carouselAutoSlideDirection || 'forward'
       const disableAutoOnHover = carousel.dataset.carouselDisableAutoOnHover !== 'false'
@@ -70,7 +71,7 @@
       function slideTo (index, direction = 'forward') {
         currentSlideIndex = mod(index, slides.length)
 
-        slides.forEach(function (slide, index) {
+        slides.forEach((slide, index) => {
           if (index === currentSlideIndex) {
             slide.classList.add(`carousel__view__slide--active-${direction}`)
           } else {
@@ -85,7 +86,7 @@
      * @param {number} val
      * @param {number} by
      */
-    function mod(val, by) {
+    function mod (val, by) {
       return (val % by + by) % by
     }
   })

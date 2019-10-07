@@ -633,3 +633,57 @@ a {
 }
 
 /* #endregion */
+
+
+/* Product Section */
+.product_left .productpic{
+  float: left;
+  margin-right: 30px;
+}
+
+.product_right .productpic{
+  float: Right;
+  margin-left: 30px;
+}
+
+img{
+  width: 225px;
+}
+
+.product_details_left{
+  margin-left: 50px;
+}
+
+.product_details_right{
+  margin-right: 50px;
+  text-align: right;
+}
+
+.product_left{
+  margin: 35px 25%;
+  padding: 20px;
+}
+
+.product_right{
+  margin: 35px 25%;
+  padding: 20px;
+}
+
+button{
+  margin: 10px auto 0;
+  padding: 10px 15px;
+}
+
+/* change the color */
+.product_left:hover{
+  border: 1px solid grey;
+  background-color: darkgray;
+}
+
+.product_right:hover{
+  border: 1px solid grey;
+  background-color: darkgray;
+}
+/* change the color */
+
+/* Product Section */

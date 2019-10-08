@@ -199,7 +199,6 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(50%);
 }
 
 .carousel__view__slide__content {
@@ -665,6 +664,10 @@ a {
   padding-bottom: 5rem;
 }
 
+.filter-darken {
+  filter: brightness(50%);
+}
+
 /* #endregion */
 
 /* #region Hero */
@@ -687,10 +690,6 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.hero__bg__img--darken {
-  filter: brightness(50%);
 }
 
 /* #endregion */

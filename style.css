@@ -186,9 +186,16 @@ a {
   transition: opacity 1s var(--ease);
 }
 
-.carousel__view__slide__img {
+.carousel__view__slide__bg {
   position: absolute;
   z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__view__slide__bg__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -669,15 +676,20 @@ a {
 
 .hero__bg {
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__bg__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.hero__bg--darken {
+.hero__bg__img--darken {
   filter: brightness(50%);
 }
 

@@ -82,6 +82,15 @@
     })
 
     /**
+     * Simple Parallax
+     * https://simpleparallax.com
+     */
+    new simpleParallax(document.querySelectorAll('.parallax'), {
+      scale: 1.1,
+      delay: .3
+    })
+
+    /**
      * Proper math modulus implementation that handles negative `val`
      * @param {number} val
      * @param {number} by

@@ -788,7 +788,7 @@ img{
   padding: 20px;
 }
 
-button{
+.btn--product-details{
   margin: 10px auto 0;
   padding: 10px 15px;
 }

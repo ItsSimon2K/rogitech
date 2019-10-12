@@ -128,10 +128,6 @@ a {
 	height: 100%;
 }
 
-.carousel--v-full {
-  height: 500px;
-}
-
 .carousel__controls {
 	display: flex;
 	align-items: center;
@@ -207,14 +203,11 @@ a {
   flex-direction: column;
   flex: 0 1 0;
   justify-content: flex-end;
-  padding: 2rem;
-  margin: 0 calc(2rem + 2em);
-  height: 100%;
-  opacity: 0;
-}
-
-.carousel--v-full .carousel__view__slide__content {
   padding: 2rem 0;
+  margin: 0 auto;
+  height: 100%;
+  max-width: calc(100% - 4rem - 4em);
+  opacity: 0;
 }
 
 .carousel__view__slide--active-forward .carousel__view__slide__content {
@@ -716,12 +709,16 @@ a {
   text-align: center;
 }
 
-.w-100 {
+.w-full {
   width: 100%;
 }
 
-.h-100 {
+.h-full {
   height: 100%;
+}
+
+.h-500 {
+  height: 500px;
 }
 
 .my-1 {
@@ -818,10 +815,6 @@ a {
 @media (min-width: 576px) {
   .container {
     width: 540px;
-  }
-
-  .carousel--v-full .carousel__view__slide__content {
-    padding: 2rem;
   }
 
 

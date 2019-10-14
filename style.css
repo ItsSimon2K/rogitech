@@ -391,18 +391,6 @@ a {
 
 /* #endregion */
 
-/* #region Card */
-
-.card {
-  padding: 1rem;
-}
-
-/* .card__text {
-
-} */
-
-/* #endregion */
-
 /* #region Newsletter */
 
 /* .newsletter {
@@ -459,6 +447,7 @@ a {
 }
 
 .row--center {
+  justify-content: center;
   align-content: center;
   align-items: center;
 }
@@ -771,6 +760,31 @@ a {
 .py-5 {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.px-1 {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-3 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-4 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.px-5 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .filter-darken {

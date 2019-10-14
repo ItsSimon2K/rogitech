@@ -433,6 +433,8 @@ a {
 .newsletter__form__button {
   padding: .5rem 1rem;
   font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
   background-color: var(--color-primary-500);
   border: none;
   outline: none;

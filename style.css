@@ -244,6 +244,56 @@ a {
 
 /* #endregion */
 
+/* #region Mini card */
+
+.mini-card {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: .25rem;
+  overflow: hidden;
+}
+
+.mini-card__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mini-card__bg__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(0);
+  transform: scale(1);
+  transition: filter .2s var(--ease), transform .2s var(--ease);
+}
+
+.mini-card:hover .mini-card__bg__img,
+.mini-card:focus .mini-card__bg__img {
+  filter: blur(5px);
+  transform: scale(1.05);
+}
+
+.mini-card__content {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity .2s var(--ease);
+}
+
+.mini-card:hover .mini-card__content,
+.mini-card:focus .mini-card__content {
+  opacity: 1;
+}
+
+/* #endregion */
+
 /* #region List */
 
 .list {
@@ -450,6 +500,30 @@ a {
   justify-content: center;
   align-content: center;
   align-items: center;
+}
+
+.row--gutter-1 {
+  margin: -.5rem;
+}
+
+.row--gutter-1 > * {
+  margin: .5rem;
+}
+
+.row--gutter-2 {
+  margin: -1rem;
+}
+
+.row--gutter-2 > * {
+  margin: 1rem;
+}
+
+.row--gutter-3 {
+  margin: -2rem;
+}
+
+.row--gutter-3 > * {
+  margin: 2rem;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {

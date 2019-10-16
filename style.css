@@ -617,6 +617,7 @@ a {
   box-shadow: 0 3px 15px 1px rgba(0,0,0,.1);
   list-style: none;
   opacity: 0;
+  overflow: hidden;
   visibility: hidden;
   transition: all .2s var(--ease), visibility .2s .2s;
 }
@@ -672,19 +673,22 @@ a {
   color: var(--color-primary-100);
   width: 100%;
   max-height: 0;
+  opacity: 0;
+  transform: rotateX(0);
   box-shadow: none;
   overflow: hidden;
-  transition: all .2s var(--ease), max-height .5s var(--ease);
+  transition: all .2s var(--ease), max-height .6s .2s var(--ease);
 }
 
 /* Overrides original dropdown control for mobile responsive */
 .dropdown:focus .app-header__nav__list__item__menu,
 .dropdown:focus-within .app-header__nav__list__item__menu,
-.dropdown__activator:focus ~ .app-header__nav__list__item__menu {
+.dropdown__activator:active ~ .app-header__nav__list__item__menu {
   opacity: 1;
   transform: rotateX(0);
   max-height: 810px;
   visibility: visible;
+  transition: all .2s .2s var(--ease), max-height .6s var(--ease);
 }
 
 /* #endregion */
@@ -944,6 +948,7 @@ a {
     border-radius: 0;
     opacity: 1;
     padding: 0;
+    overflow: unset;
     visibility: visible;
   }
 
@@ -955,6 +960,7 @@ a {
     position: absolute;
     width: 300px;
     max-height: 810px;
+    transform: rotateX(-10deg);
     box-shadow: 0 3px 15px 1px rgba(0,0,0,.1);
   }
 

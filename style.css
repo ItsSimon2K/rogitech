@@ -69,6 +69,19 @@ a {
   text-decoration: none;
 }
 
+input, select, textarea {
+  padding: .25rem .5rem;
+  margin: .5rem 0;
+  border-radius: .25rem;
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
 /* #endregion */
 
 /* #region Container */
@@ -244,6 +257,19 @@ a {
 
 /* #endregion */
 
+/* #region Card */
+
+.card {
+  color: var(--color-primary-100);
+  background-color: var(--color-gray-700);
+  padding: 1rem;
+  border-radius: .25rem;
+  overflow: hidden;
+  box-shadow: 0 3px 15px 1px rgba(0,0,0,.1);
+}
+
+/* #endregion */
+
 /* #region Mini card */
 
 .mini-card {
@@ -391,6 +417,11 @@ a {
   background-color: var(--color-primary-500);
 }
 
+.btn--primary:hover,
+.btn--primary:focus {
+  background-color: var(--color-primary-400);
+}
+
 .btn--primary-outline {
   color: var(--color-primary-500);
   background-color: transparent;
@@ -463,17 +494,21 @@ a {
 .newsletter__form__email {
   flex: 1;
   padding: .5rem 1rem;
+  margin: 0;
   font-size: 1.1rem;
+  border-radius: 0;
   border: none;
   outline: none;
 }
 
 .newsletter__form__button {
   padding: .5rem 1rem;
+  margin: 0;
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--color-gray-900);
   background-color: var(--color-primary-500);
+  border-radius: 0;
   border: none;
   outline: none;
   cursor: pointer;
@@ -764,6 +799,17 @@ a {
 
 /* #endregion */
 
+/* #region App card */
+
+/* Used with .card */
+.app-card {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* #endregion */
+
 /* #region Helpers */
 
 .text-left {
@@ -969,6 +1015,16 @@ a {
     flex: 1 0 25%;
     width: 25%;
   }
+
+
+  .app-card {
+    width: 600px;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: var(--color-gray-700);
+    box-shadow: 0 3px 15px 1px rgba(0,0,0,.1);
+  }
+
 
   /* Logo */
   .app-footer__nav__item:first-child {

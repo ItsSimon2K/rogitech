@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Rogitech | Feedback Form</title>
+<meta charset="utf-8">
+<meta name="author" content="Jason Liu Shao Yun">
+<meta name="description" content="Event Horizon's Products">
+<meta name="keywords" content="">
+</head>
+
+<body>
+<header>
+
+</header>
+
+<form name="feedback form" method="get">
+<table>
+   <tr>
+      <th>First Name*</th>
+	  <th>Last Name*</th>
+   </tr>
+   <tr>
+      <td><input type="text" name="first name" required="required" placeholder="First Name"></td>
+	  <td><input type="text" name="last name" required="required" placeholder="Last Name"></td>
+   </tr>
+   <tr>
+      <th>Feedback Type*</th>
+	  <td></td>
+   </tr>
+   <tr>
+      <td>
+	     <input type="radio" name="feedback type" required="required" value="comment">Comment
+	     <input type="radio" name="feedback type" required="required" value="question">Question
+		 <input type="radio" name="feedback type" required="required" value="complaint">Complaint
+	  </td>
+	  <td></td>
+   </tr>
+   <tr>
+      <td>Describe Feedback*</td>
+	  <td></td>
+   </tr>
+   <tr>
+      <td><textarea name="describe feedback" rows="3" cols="40"></textarea></td>
+	  <td></td>
+   </tr>
+   <tr>
+      <td>E-mail*</td>
+	  <td></td>
+   </tr>
+   <tr>
+      <td><input type="text" name="email" required="required" placeholder="ex: myname@example.com"></td>
+	  <td></td>
+   </tr>
+</table>
+
+<p>
+   <input type="submit" value="Submit">
+   <input type="reset" value="Reset">
+</p>
+
+</form>
+
+</body>
+
+</html>

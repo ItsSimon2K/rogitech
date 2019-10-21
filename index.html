@@ -14,9 +14,10 @@
 
   <title>Rogitech</title>
 
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
   <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
 </head>
@@ -145,7 +146,7 @@
   </header>
   <main>
     <section>
-      <div class="carousel carousel--v-full" data-carousel-auto-slide-interval="5000">
+      <div class="carousel h-500" data-carousel-auto-slide-interval="5000">
         <div class="carousel__controls">
           <button class="carousel__controls__backward">
             <i class="fas fa-chevron-left fa-2x" aria-hidden="true"></i>
@@ -161,9 +162,11 @@
               <img class="carousel__view__slide__bg__img filter-darken parallax" src="images/mouse1.jpg" alt="Mouse hero image">
             </div>
             <div class="carousel__view__slide__content">
-              <h1>The all new ABC-1 Gaming Mouse</h1>
-              <div>
-                <a class="btn btn--primary-outline" href="mouse.html">View more</a>
+              <div class="container">
+                <h1>The all new ABC-1 Gaming Mouse</h1>
+                <div>
+                  <a class="btn btn--primary-outline" href="mouse.html">View more</a>
+                </div>
               </div>
             </div>
           </div>
@@ -173,9 +176,11 @@
               <img class="carousel__view__slide__bg__img filter-darken parallax" src="images/keyboard1.jpg" alt="Keyboard hero image">
             </div>
             <div class="carousel__view__slide__content">
-              <h1>Type at lightning speed</h1>
-              <div>
-                <a class="btn btn--primary-outline" href="keyboard.html">View more</a>
+              <div class="container">
+                <h1>Type at lightning speed</h1>
+                <div>
+                  <a class="btn btn--primary-outline" href="keyboard.html">View more</a>
+                </div>
               </div>
             </div>
           </div>
@@ -185,35 +190,85 @@
               <img class="carousel__view__slide__bg__img filter-darken parallax" src="images/headset1.jpg" alt="Headset hero image">
             </div>
             <div class="carousel__view__slide__content">
-              <h1>Surround sound</h1>
-              <div>
-                <a class="btn btn--primary-outline" href="headset.html">View more</a>
+              <div class="container">
+                <h1>Surround sound</h1>
+                <div>
+                  <a class="btn btn--primary-outline" href="headset.html">View more</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="container my-5 text-center">
-      <h1>Explore a World-class Gaming Experience</h1>
-      <p>Only the best gaming rigs. Ever.</p>
-      <a class="btn btn--primary-outline" href="products.html">View all</a>
+    <section class="container my-4 text-center">
+      <h2 class="fader">Explore a World-class Gaming Experience</h2>
+      <p class="fader">We forge only the best gaming rigs. Get yours today.</p>
     </section>
-    <section class="hero my-3" style="height: 500px;">
+    <section class="container my-4">
+      <div class="row row--center row--gutter-1">
+        <a class="mini-card" href="mouse.html">
+          <div class="mini-card__bg">
+            <img class="mini-card__bg__img" src="https://picsum.photos/id/810/300/300.jpg" alt="Placeholder">
+          </div>
+          <div class="mini-card__content row row--center">
+            <h3>Mouse</h3>
+          </div>
+        </a>
+        <a class="mini-card" href="keyboard.html">
+          <div class="mini-card__bg">
+            <img class="mini-card__bg__img" src="https://picsum.photos/id/810/300/300.jpg" alt="Placeholder">
+          </div>
+          <div class="mini-card__content row row--center">
+            <h3>Keyboard</h3>
+          </div>
+        </a>
+        <a class="mini-card" href="headset.html">
+          <div class="mini-card__bg">
+            <img class="mini-card__bg__img" src="https://picsum.photos/id/810/300/300.jpg" alt="Placeholder">
+          </div>
+          <div class="mini-card__content row row--center">
+            <h3>Headset</h3>
+          </div>
+        </a>
+        <a class="mini-card" href="speaker.html">
+          <div class="mini-card__bg">
+            <img class="mini-card__bg__img" src="https://picsum.photos/id/810/300/300.jpg" alt="Placeholder">
+          </div>
+          <div class="mini-card__content row row--center">
+            <h3>Speaker</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="hero my-3 h-500">
       <div class="hero__bg">
         <!-- https://unsplash.com/photos/nuW1WqqDzsU -->
         <img class="hero__bg__img filter-darken parallax" src="images/gaming_bg.jpg" alt="Gaming background">
       </div>
-      <div class="container py-3 row row--center text-center h-100">
-        <h2 class="col-6">
+      <div class="container py-3 row row--center text-center h-full">
+        <h2 class="col-6 fader">
           Trusted by major eSports organizers and gaming communities
         </h2>
         <div class="col-6">
-          <span class="card">Nova eSports</span>
-          <span class="card">Tribe Gaming</span>
-          <span class="card">H2O</span>
-          <span class="card">Aura Gaming</span>
-          <span class="card">InTheLight</span>
+          <div class="row row--center row--gutter-2">
+            <div class="fader">
+              <!-- https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Blizzard_Entertainment_Logo.svg/1200px-Blizzard_Entertainment_Logo.svg.png -->
+              <img src="images/esports_blizzard.png" alt="Blizzard logo">
+            </div>
+            <div class="fader">
+              <!-- https://images.techhive.com/images/article/2017/02/twitch-logo-100710727-large.jpg -->
+              <img src="images/esports_twitch.png" alt="Twitch logo">
+            </div>
+            <div class="fader">
+              <!-- https://cdn.worldvectorlogo.com/logos/esl.svg -->
+              <img src="images/esports_esl.png" alt="ESL logo">
+            </div>
+            <div class="fader">
+              <!-- https://liquipedia.net/commons/images/thumb/2/22/Cr_Nova_eSports_Logo_Large.png/600px-Cr_Nova_eSports_Logo_Large.png -->
+              <img src="images/esports_nova.png" alt="Nova eSports logo">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -225,7 +280,70 @@
   </main>
   <footer class="app-footer">
     <div class="container">
-      <span>&copy; <a href="eventhorizon.html">Event Horizon</a> | Last updated: 2019</span>
+      <div class="app-footer__nav">
+        <div class="app-footer__nav__item">
+          <h5>
+            <a href="index.html">
+              <img src="images/logo_icon.svg" alt="Logo icon" height="28">
+              <img src="images/logo_name.svg" alt="Logo name" height="22">
+            </a>
+          </h5>
+          <div class="newsletter">
+            <h6 class="newsletter__header">Get the latest news and deals!</h6>
+            <form class="newsletter__form" name="newsletter" onsubmit="return false">
+              <input class="newsletter__form__email" type="email" name="email" size="20" placeholder="john@example.com" required="required">
+              <input class="newsletter__form__button" type="submit" value="Subscribe">
+            </form>
+          </div>
+          <div class="my-3">
+            <a class="btn btn--primary-outline" type="button" href="feedback.html">Give website feedback</a>
+          </div>
+        </div>
+        <div class="app-footer__nav__item">
+          <h5><a class="app-footer__nav__item__header" href="products.html">Products</a></h5>
+          <ul class="app-footer__nav__item__list">
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-mouse-pointer" aria-hidden="true"></i>
+              <a href="mouse.html">Mouse</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-keyboard" aria-hidden="true"></i>
+              <a href="keyboard.html">Keyboard</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-headphones" aria-hidden="true"></i>
+              <a href="headset.html">Headset</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-volume-up" aria-hidden="true"></i>
+              <a href="speaker.html">Speaker</a>
+            </li>
+          </ul>
+        </div>
+        <div class="app-footer__nav__item">
+          <h5><a class="app-footer__nav__item__header" href="support.html">Support</a></h5>
+          <ul class="app-footer__nav__item__list">
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-info" aria-hidden="true"></i>
+              <a href="warranty-info.html">Warranty info</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-headset" aria-hidden="true"></i>
+              <a href="contact-support.html">Contact us</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-exclamation" aria-hidden="true"></i>
+              <a href="report-a-problem.html">Report a problem</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="app-footer__credits">
+        <span>
+          &copy; <a href="eventhorizon.html">Event Horizon</a> | Last updated: 2019
+        </span>
+      </div>
     </div>
   </footer>
   <script async src="script.js"></script>

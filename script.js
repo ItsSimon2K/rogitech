@@ -12,6 +12,8 @@
  */
 (() => {
   window.addEventListener('load', () => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
     /**
      * Carousel
      * 
@@ -36,12 +38,14 @@
       const slides = carousel.querySelectorAll('.carousel__view .carousel__view__slide')
 
       // Go forward
-      carousel.querySelectorAll('.carousel__controls .carousel__controls__forward')
-        .forEach(btn => btn.addEventListener('click', () => slideTo(currentSlideIndex + 1, 'forward')))
+      carousel.querySelectorAll('.carousel__controls .carousel__controls__forward').forEach((btn) => {
+        btn.addEventListener('click', () => slideTo(currentSlideIndex + 1, 'forward'))
+      })
 
       // Go backward
-      carousel.querySelectorAll('.carousel__controls .carousel__controls__backward')
-        .forEach(btn => btn.addEventListener('click', () => slideTo(currentSlideIndex - 1, 'backward')))
+      carousel.querySelectorAll('.carousel__controls .carousel__controls__backward').forEach((btn) => {
+        btn.addEventListener('click', () => slideTo(currentSlideIndex - 1, 'backward'))
+      })
 
       // Auto slide
       if (autoSlideInterval) {
@@ -118,19 +122,21 @@
 
       fader.style.opacity = 0
 
-      switch (direction) {
-        case 'up':
-          fader.style.transform = `translate3d(0, ${move}, 0)`
-          break
-        case 'down':
-          fader.style.transform = `translate3d(0, -${move}, 0)`
-          break
-        case 'left':
-          fader.style.transform = `translate3d(${move}, 0, 0)`
-          break
-        case 'right':
-          fader.style.transform = `translate3d(-${move}, 0, 0)`
-          break
+      if (!reducedMotion) {
+        switch (direction) {
+          case 'up':
+            fader.style.transform = `translate3d(0, ${move}, 0)`
+            break
+          case 'down':
+            fader.style.transform = `translate3d(0, -${move}, 0)`
+            break
+          case 'left':
+            fader.style.transform = `translate3d(${move}, 0, 0)`
+            break
+          case 'right':
+            fader.style.transform = `translate3d(-${move}, 0, 0)`
+            break
+        }
       }
 
       fader.style.transition = `all ${duration} ${delay} ${easing}`
@@ -142,7 +148,7 @@
      * Simple Parallax
      * https://simpleparallax.com
      */
-    if (typeof simpleParallax !== 'undefined') {
+    if (!reducedMotion && typeof simpleParallax !== 'undefined') {
       new simpleParallax(document.querySelectorAll('.parallax'), {
         scale: 1.1,
         delay: .3
@@ -151,12 +157,12 @@
 
     // Scroll to Top Button     
     document.querySelectorAll('.scroll-top-btn').forEach((btn) => {
-        btn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            })
+      btn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: reducedMotion ? 'auto' : 'smooth'
         })
+      })
     })
 
     /**

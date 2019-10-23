@@ -1,7 +1,7 @@
 /**
  * Main script file
  * 
- * Author: Bjorn Lu
+ * Author: Bjorn Lu, Sim Mao Chen
  * 
  * Notes:
  * - Vanilla JS
@@ -148,6 +148,16 @@
         delay: .3
       })
     }
+
+    // Scroll to Top Button     
+    document.querySelectorAll('.scroll-top-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        })
+    })
 
     /**
      * Proper math modulus implementation that handles negative `val`

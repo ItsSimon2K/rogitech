@@ -1134,12 +1134,12 @@ input[type="submit"] {
 }
 
 .product_left{
-  margin: 35px 25%;
+  margin: 35px 0;
   padding: 20px;
 }
 
 .product_right{
-  margin: 35px 25%;
+  margin: 35px 0;
   padding: 20px;
 }
 
@@ -1161,3 +1161,14 @@ input[type="submit"] {
 /* change the color */
 
 /* Product Section */
+
+/* Scroll to top button */
+button.scroll-top-btn{
+  position: fixed;
+  right: 7%;
+  bottom: 10%;
+  padding: 15px 17px;
+  border-style: none;
+  border-radius: 100%;
+}
+/* Scroll to top button */

@@ -1195,6 +1195,41 @@ input[type="submit"] {
 
 /* Product Section */
 
+/* Contact Page */
+.contact_banner{
+  text-align: center;
+}
+
+.contact_content{
+  text-align: center;
+}
+
+.contact_left{
+  width: 26%;
+  margin-left: 5%;
+  padding: 4% 0;
+  float: left;
+  background-color: var(--color-gray-700);
+}
+
+.contact_mid{
+  width: 26%;
+  margin-left: 6%;
+  padding: 4% 0;
+  float: left;
+  background-color: var(--color-gray-700);
+}
+
+.contact_right{
+  width: 26%;  
+  margin-left: 6%;
+  padding: 4% 0;
+  float: left;
+  background-color: var(--color-gray-700);
+}
+
+/* Contact Page */
+
 /* Scroll to top button */
 button.scroll-top-btn{
   position: fixed;

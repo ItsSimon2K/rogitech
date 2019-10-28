@@ -16,47 +16,41 @@
 
 </header>
 
-<form name="feedback form" method="get">
-<table>
+<form name="feedback form" method="get" class="feedback_form">
+<table class="form_table">
    <tr>
       <th>First Name*</th>
 	  <th>Last Name*</th>
    </tr>
    <tr>
-      <td><input type="text" name="first name" required="required" placeholder="First Name"></td>
-	  <td><input type="text" name="last name" required="required" placeholder="Last Name"></td>
+      <td><input type="text" name="first name" required="required" placeholder="First Name" size="40"></td>
+	  <td><input type="text" name="last name" required="required" placeholder="Last Name" size="40"></td>
    </tr>
    <tr>
-      <th>Feedback Type*</th>
-	  <td></td>
+      <th colspan="2">Feedback Type*</th>
    </tr>
    <tr>
-      <td>
+      <td colspan="2">
 	     <input type="radio" name="feedback type" required="required" value="comment">Comment
 	     <input type="radio" name="feedback type" required="required" value="question">Question
 		 <input type="radio" name="feedback type" required="required" value="complaint">Complaint
 	  </td>
-	  <td></td>
    </tr>
    <tr>
-      <td>Describe Feedback*</td>
-	  <td></td>
+      <td colspan="2">Describe Feedback*</td>
    </tr>
    <tr>
-      <td><textarea name="describe feedback" rows="3" cols="40"></textarea></td>
-	  <td></td>
+      <td colspan="2"><textarea name="describe feedback" rows="8" cols="70"></textarea></td>
    </tr>
    <tr>
-      <td>E-mail*</td>
-	  <td></td>
+      <td colspan="2">E-mail*</td>
    </tr>
    <tr>
-      <td><input type="text" name="email" required="required" placeholder="ex: myname@example.com"></td>
-	  <td></td>
+      <td colspan="2"><input type="text" name="email" required="required" placeholder="ex: myname@example.com" size="40"></td>
    </tr>
 </table>
 
-<p>
+<p class="submit_and_reset">
    <input type="submit" value="Submit">
    <input type="reset" value="Reset">
 </p>

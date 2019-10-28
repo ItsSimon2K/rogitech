@@ -1287,3 +1287,21 @@ button.scroll-top-btn{
   border-radius: 100%;
 }
 /* Scroll to top button */
+
+/* Feedback Form */
+.feedback_form{
+  text-align: left;
+  float: left;
+  margin-left: 20%;
+}
+
+.form_table{
+  width: 70%;
+  border-spacing: 20px;
+}
+
+.submit_and_reset{
+  text-align: center;
+}
+
+/* Feedback Form */

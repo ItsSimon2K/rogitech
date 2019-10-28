@@ -1207,7 +1207,7 @@ input[type="submit"] {
 .contact_left{
   width: 26%;
   margin-left: 5%;
-  padding: 4% 0;
+  padding: 4% 4%;
   float: left;
   background-color: var(--color-gray-700);
 }
@@ -1215,7 +1215,7 @@ input[type="submit"] {
 .contact_mid{
   width: 26%;
   margin-left: 6%;
-  padding: 4% 0;
+  padding: 4% 4%;
   float: left;
   background-color: var(--color-gray-700);
 }
@@ -1223,9 +1223,19 @@ input[type="submit"] {
 .contact_right{
   width: 26%;  
   margin-left: 6%;
-  padding: 4% 0;
+  padding: 4% 4%;
   float: left;
   background-color: var(--color-gray-700);
+}
+
+.contact_info{
+  text-align: center;
+  margin: auto;
+  display: inline-block;
+}
+
+.contact_info_item{
+  text-align: left;
 }
 
 /* Contact Page */

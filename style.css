@@ -845,9 +845,10 @@ input[type="submit"] {
 
 /* Used with .card */
 .app-card {
-  padding: 0;
-  background-color: transparent;
-  box-shadow: none;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: var(--shadow-2);
 }
 
 /* #endregion */
@@ -1089,15 +1090,6 @@ input[type="submit"] {
   .app-footer__nav__item {
     flex: 1 0 25%;
     width: 25%;
-  }
-
-
-  .app-card {
-    width: 600px;
-    padding: 1rem;
-    margin: 0 auto;
-    background-color: var(--color-gray-700);
-    box-shadow: var(--shadow-2);
   }
 
 

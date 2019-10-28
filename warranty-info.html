@@ -24,7 +24,8 @@
   <main class="container">
     <h1 class="text-center">Warranty info</h1>
     <div class="app-card card">
-      <form name="warranty" onsubmit="return false">
+      <form class="fake-load" name="warranty" onsubmit="return false" data-fake-load-targets=".app-card.card"
+        data-fake-load-classes="card--loading">
         <h2 class="text-center">Fill in the fields below to check warranty</h2>
         <div class="my-2">
           <label for="country">Country of purchase</label><br>
@@ -293,6 +294,8 @@
       </form>
     </div>
   </main>
+
+  <script defer src="script.js"></script>
 </body>
 
 </html>

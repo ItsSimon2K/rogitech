@@ -166,6 +166,47 @@
     })
 
     /**
+     * Fake load
+     * 
+     * Description:
+     * - When submit form, fake loads nothing
+     * - When start to load, it adds classes to respective targets, and removes all when done
+     * 
+     * Data:
+     * - `data-fake-load-duration`: Loading duration in ms. (Default: 3000)
+     * - `data-fake-load-targets`: Comma-separated targets using query selectors. (Default: self)
+     * - `data-fake-load-classes`: Comma-separated classes for respective targets. (Default: 'loading')
+     */
+    document.querySelectorAll('.fake-load').forEach((el) => {
+      const {
+        fakeLoadDuration: duration = 3000,
+        fakeLoadTargets: targets = el,
+        fakeLoadClasses: loadClasses = 'loading'
+      } = el.dataset
+
+      const targetList = typeof targets !== 'string' ? [targets] : targets.split(',').map(v => document.querySelectorAll(v.trim()))
+      const loadClassList = loadClasses.split(',').map(v => v.trim())
+
+      const minListLength = Math.min(targetList.length, loadClassList.length)
+
+      el.addEventListener('submit', (evt) => {
+        evt.preventDefault()
+
+        // Add loading classes
+        for (let i = 0; i < minListLength; i++) {
+          targetList[i].forEach(v => v.classList.add(loadClassList[i]))
+        }
+
+        setTimeout(() => {
+          // Remove loading classes
+          for (let i = 0; i < minListLength; i++) {
+            targetList[i].forEach(v => v.classList.remove(loadClassList[i]))
+          }
+        }, +duration)
+      })
+    })
+
+    /**
      * Proper math modulus implementation that handles negative `val`
      * @param {number} val
      * @param {number} by

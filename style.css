@@ -1234,8 +1234,23 @@ input[type="submit"] {
 /* Product Section */
 
 /* Contact Page */
-.contact_banner{
+.contact_banner > h1{
   text-align: center;
+  height: 150px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.contact_banner img{
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  opacity: 0.6;
+  object-fit: cover;
 }
 
 .contact_content{
@@ -1243,8 +1258,10 @@ input[type="submit"] {
 }
 
 .contact_left{
+  position: relative;
   width: 27%;
   height: 500px;
+  margin-bottom: 80px;
   margin-left: 4%;
   padding: 4% 4%;
   float: left;
@@ -1252,8 +1269,10 @@ input[type="submit"] {
 }
 
 .contact_mid{
+  position: relative;
   width: 27%;
   height: 500px;
+  margin-bottom: 80px;
   margin-left: 5%;
   padding: 4% 4%;
   float: left;
@@ -1261,8 +1280,10 @@ input[type="submit"] {
 }
 
 .contact_right{
+  position: relative;
   width: 27%;  
   height: 500px;
+  margin-bottom: 80px;
   margin-left: 5%;
   padding: 4% 4%;
   float: left;
@@ -1292,6 +1313,9 @@ input[type="submit"] {
 
 /* Contact Page */
 
+footer{
+  clear: both;
+}
 /* Scroll to top button */
 button.scroll-top-btn{
   position: fixed;

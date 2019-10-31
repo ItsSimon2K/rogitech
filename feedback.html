@@ -19,24 +19,26 @@
 <div class="feedback_form">
 <form name="feedback form" method="get">
    <label for="fname">First Name*</label>
-   <input type="text" name="first name" required="required" placeholder="First Name">
+   <input type="text" name="first name" required="required" placeholder="First Name" class="ftextarea">
    
    <label for="lname">Last Name*</label>
-   <input type="text" name="last name" required="required" placeholder="Last Name">
+   <input type="text" name="last name" required="required" placeholder="Last Name" class="ftextarea">
    
    <label for="ftype">Feedback Type*</label>
-   <input type="radio" name="feedback type" required="required" value="comment">Comment
-   <input type="radio" name="feedback type" required="required" value="question">Question
-   <input type="radio" name="feedback type" required="required" value="complaint">Complaint
-   
+   <select id="feedback_type" name="feedback_type" class="ftextarea">
+      <option value="comment">Comment</option>
+      <option value="question">Question</option>
+      <option value="complaint">Complaint</option>
+    </select>
+	
    <label for="fdescribe">Describe Feedback*</label>
    <textarea name="describe feedback" required="required" rows="8" cols="70" class="ftextarea"></textarea>
    
    <label for="email">E-mail*</label>
-   <input type="text" name="email" required="required" placeholder="myname@example.com">
+   <input type="text" name="email" required="required" placeholder="myname@example.com" class="ftextarea">
    
 <p>
-   <input type="submit" value="Submit">
+   <input type="submit" value="Submit" class="fsubmit">
 </p>
 
 </form>

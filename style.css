@@ -1227,18 +1227,24 @@ button.scroll-top-btn{
 .feedback_form{
   border-radius: 5px;
   background-color: #3e5618;
-  padding: 5%;
+  padding: 20px;
   width: 45%;
   margin: 0 auto;
 }
 
-input[type=text], textarea.ftextarea{
+.ftextarea{
   width: 100%;
   padding: 10px;
   resize: vertical;
   box-sizing: border-box;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.fsubmit{
+  padding: 12px 20px;
+  background-color: #7dad30;
+  color: white;
 }
 
 /* Feedback Form */

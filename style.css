@@ -1177,10 +1177,10 @@ input[type="submit"] {
 .contact_container{
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 525px;
   margin-bottom: 60px;
   margin-left: 4%;
-  padding: 4% 2%;
+  padding: 5% 2%;
   float: left;
   background-color: var(--color-gray-700);
 }
@@ -1207,6 +1207,9 @@ input[type="submit"] {
   padding: 10% 0;
 }
 
+.contact_info_item ul li{  
+  margin: 10% 0;
+}
 /* Contact Page */
 
 footer{
@@ -1220,6 +1223,10 @@ button.scroll-top-btn{
   padding: 15px 17px;
   border-style: none;
   border-radius: 100%;
+}
+
+button.scroll-top-btn:focus{
+  outline: none;
 }
 /* Scroll to top button */
 

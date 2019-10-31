@@ -1060,6 +1060,11 @@ input[type="submit"] {
   object-fit: cover;
 }
 
+.hero__content {
+  position: relative;
+  z-index: 1;
+}
+
 /* #endregion */
 
 /* #region simpleParallax */

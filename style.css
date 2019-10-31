@@ -1071,32 +1071,6 @@ input[type="submit"] {
 
 /* #endregion */
 
-/* #region Reduced motion */
-
-@media (prefers-reduced-motion: reduce) {
-  @keyframes carousel__view__slide__content--forward {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes carousel__view__slide__content--backward {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-}
-
-/* #endregion */
-
 /* Product Section */
 .product_left .productpic{
   float: left;
@@ -1267,7 +1241,6 @@ button.scroll-top-btn:focus{
 
 /* Feedback Form */
 
-
 /* #region Breakpoints */
 
 @media (min-width: 576px) {
@@ -1349,6 +1322,32 @@ button.scroll-top-btn:focus{
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
+  }
+}
+
+/* #endregion */
+
+/* #region Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes carousel__view__slide__content--forward {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes carousel__view__slide__content--backward {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 }
 

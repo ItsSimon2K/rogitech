@@ -1223,7 +1223,7 @@ button.scroll-top-btn:focus{
 /* Feedback Form */
 .feedback_form{
   border-radius: 5px;
-  background-color: #3e5618;
+  background-color: var(--color-primary-800);
   padding: 20px;
   width: 45%;
   margin: 0 auto;
@@ -1240,7 +1240,7 @@ button.scroll-top-btn:focus{
 
 .fsubmit{
   padding: 12px 20px;
-  background-color: #7dad30;
+  background-color: var(--color-primary-600);
   color: white;
 }
 

@@ -1071,89 +1071,6 @@ input[type="submit"] {
 
 /* #endregion */
 
-/* #region Breakpoints */
-
-@media (min-width: 576px) {
-  .container {
-    width: 540px;
-  }
-
-
-  .app-footer__nav__item {
-    flex: 1 0 50%;
-    width: 50%;
-  }
-
-  /* Logo */
-  .app-footer__nav__item:first-child {
-    flex: 1 0 100%;
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 960px;
-  }
-
-
-  .app-header__nav__burger {
-    display: none;
-  }
-
-  .app-header__nav__list {
-    position: static;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    border-radius: 0;
-    opacity: 1;
-    padding: 0;
-    box-shadow: none;
-    overflow: unset;
-    visibility: visible;
-  }
-
-  .app-header__nav__list__item {
-    display: inline-block;
-  }
-
-  .app-header__nav__list__item__menu {
-    position: absolute;
-    width: 300px;
-    max-height: 810px;
-    transform: rotateX(-10deg);
-    box-shadow: var(--shadow-2);
-  }
-
-
-  .app-footer__nav__item {
-    flex: 1 0 25%;
-    width: 25%;
-  }
-
-
-  /* Logo */
-  .app-footer__nav__item:first-child {
-    flex: 1 0 50%;
-    width: 50%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1140px;
-  }
-}
-
-/* #endregion */
-
 /* #region Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1257,35 +1174,13 @@ input[type="submit"] {
   text-align: center;
 }
 
-.contact_left{
+.contact_container{
   position: relative;
-  width: 27%;
+  width: 100%;
   height: 500px;
   margin-bottom: 60px;
   margin-left: 4%;
-  padding: 4% 4%;
-  float: left;
-  background-color: var(--color-gray-700);
-}
-
-.contact_mid{
-  position: relative;
-  width: 27%;
-  height: 500px;
-  margin-bottom: 60px;
-  margin-left: 5%;
-  padding: 4% 4%;
-  float: left;
-  background-color: var(--color-gray-700);
-}
-
-.contact_right{
-  position: relative;
-  width: 27%;  
-  height: 500px;
-  margin-bottom: 60px;
-  margin-left: 5%;
-  padding: 4% 4%;
+  padding: 4% 2%;
   float: left;
   background-color: var(--color-gray-700);
 }
@@ -1304,7 +1199,8 @@ input[type="submit"] {
 
 .contact_info_item ul{
   list-style-type: none;
-  padding-left: 20%;
+  padding-left: 0;
+  display:inline;
 }
 
 .contact_info_item > li{
@@ -1346,3 +1242,90 @@ input[type=text], textarea{
 }
 
 /* Feedback Form */
+
+
+/* #region Breakpoints */
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+
+
+  .app-footer__nav__item {
+    flex: 1 0 50%;
+    width: 50%;
+  }
+
+  /* Logo */
+  .app-footer__nav__item:first-child {
+    flex: 1 0 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+
+
+  .app-header__nav__burger {
+    display: none;
+  }
+
+  .app-header__nav__list {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    opacity: 1;
+    padding: 0;
+    box-shadow: none;
+    overflow: unset;
+    visibility: visible;
+  }
+
+  .app-header__nav__list__item {
+    display: inline-block;
+  }
+
+  .app-header__nav__list__item__menu {
+    position: absolute;
+    width: 300px;
+    max-height: 810px;
+    transform: rotateX(-10deg);
+    box-shadow: var(--shadow-2);
+  }
+
+
+  .app-footer__nav__item {
+    flex: 1 0 25%;
+    width: 25%;
+  }
+
+  .contact_container{
+    width: 27%;
+  }
+
+  /* Logo */
+  .app-footer__nav__item:first-child {
+    flex: 1 0 50%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+/* #endregion */

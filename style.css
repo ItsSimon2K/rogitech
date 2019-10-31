@@ -1329,18 +1329,20 @@ button.scroll-top-btn{
 
 /* Feedback Form */
 .feedback_form{
-  text-align: left;
-  float: left;
-  margin-left: 20%;
+  border-radius: 5px;
+  background-color: #3e5618;
+  padding: 5%;
+  width: 900px;
+  margin: 0 auto;
 }
 
-.form_table{
-  width: 70%;
-  border-spacing: 20px;
-}
-
-.submit_and_reset{
-  text-align: center;
+input[type=text], textarea{
+  width: 100%;
+  padding: 12px;
+  resize: vertical;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* Feedback Form */

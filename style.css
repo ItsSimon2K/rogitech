@@ -842,11 +842,12 @@ input[type="submit"] {
   padding-left: 1.5rem;
   font-size: 1.5rem;
   opacity: .8;
-  transition: opacity .2s var(--ease);
+  transition: opacity .2s var(--ease), color .2s var(--ease);
 }
 
 .app-footer__nav__item__header:hover,
 .app-footer__nav__item__header:focus {
+  color: var(--color-primary-500);
   opacity: 1;
 }
 
@@ -859,11 +860,12 @@ input[type="submit"] {
   font-size: 1rem;
   margin: .5rem 0;
   opacity: .8;
-  transition: opacity .2s var(--ease);
+  transition: opacity .2s var(--ease), color .2s var(--ease);
 }
 
 .app-footer__nav__item__list__item:hover,
 .app-footer__nav__item__list__item:focus {
+  color: var(--color-primary-500);
   opacity: 1;
 }
 

@@ -1060,6 +1060,11 @@ input[type="submit"] {
   object-fit: cover;
 }
 
+.hero__content {
+  position: relative;
+  z-index: 1;
+}
+
 /* #endregion */
 
 /* #region simpleParallax */
@@ -1067,32 +1072,6 @@ input[type="submit"] {
 .simpleParallax {
   width: 100%;
   height: 100%;
-}
-
-/* #endregion */
-
-/* #region Reduced motion */
-
-@media (prefers-reduced-motion: reduce) {
-  @keyframes carousel__view__slide__content--forward {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes carousel__view__slide__content--backward {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
 }
 
 /* #endregion */
@@ -1240,7 +1219,7 @@ button.scroll-top-btn:focus{
 /* Feedback Form */
 .feedback_form{
   border-radius: 5px;
-  background-color: #3e5618;
+  background-color: var(--color-primary-800);
   padding: 20px;
   width: 45%;
   margin: 0 auto;
@@ -1257,12 +1236,11 @@ button.scroll-top-btn:focus{
 
 .fsubmit{
   padding: 12px 20px;
-  background-color: #7dad30;
+  background-color: var(--color-primary-600);
   color: white;
 }
 
 /* Feedback Form */
-
 
 /* #region Breakpoints */
 
@@ -1345,6 +1323,32 @@ button.scroll-top-btn:focus{
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
+  }
+}
+
+/* #endregion */
+
+/* #region Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes carousel__view__slide__content--forward {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes carousel__view__slide__content--backward {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 }
 

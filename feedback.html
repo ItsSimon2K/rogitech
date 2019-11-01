@@ -2,6 +2,12 @@
 
 <html lang="en">
 <head>
+
+<!-- Description: Rogitech Feedback Page -->
+<!-- Author: Jason Liu Shao Yun -->
+<!-- Date:  -->
+<!-- Validated: Ok -->
+
 <title>Rogitech | Feedback Form</title>
 
 <meta charset="utf-8">
@@ -9,42 +15,74 @@
 <meta name="description" content="Event Horizon's Products">
 <meta name="keywords" content="">
 <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 <body>
+
 <header>
 
 </header>
 
 <div class="feedback_form">
 <form name="feedback form" method="get">
-   <label for="fname">First Name*</label>
-   <input type="text" name="first name" required="required" placeholder="First Name" class="ftextarea">
-   
-   <label for="lname">Last Name*</label>
-   <input type="text" name="last name" required="required" placeholder="Last Name" class="ftextarea">
-   
-   <label for="ftype">Feedback Type*</label>
-   <select id="feedback_type" name="feedback_type" class="ftextarea">
-      <option value="comment">Comment</option>
-      <option value="question">Question</option>
-      <option value="complaint">Complaint</option>
-    </select>
-	
-   <label for="fdescribe">Describe Feedback*</label>
-   <textarea name="describe feedback" required="required" rows="8" cols="70" class="ftextarea"></textarea>
-   
-   <label for="email">E-mail*</label>
-   <input type="text" name="email" required="required" placeholder="myname@example.com" class="ftextarea">
+   <table>
+      <tr>
+	     <td>
+            <label for="fname">First Name*</label>
+		 </td>
+		 <td>
+            <label for="lname">Last Name*</label>
+		 </td>
+      </tr>
+	  <tr>
+	     <td>
+		    <input type="text" name="first name" required="required" placeholder="First Name" id="fname" class="ftextarea">
+		 </td>
+         <td>
+            <input type="text" name="last name" required="required" placeholder="Last Name" id="lname" class="ftextarea">
+		 </td>
+	  </tr>
+      <tr>
+	     <td colspan="2">
+		    <label for="ftype">Feedback Type</label>
+		 </td>         
+	  </tr>
+	  <tr>
+	     <td colspan="2">
+		    <select id="ftype" name="feedback_type" class="ftextarea">
+               <option value="comment">Comment</option>
+               <option value="question">Question</option>
+               <option value="complaint">Complaint</option>
+            </select>
+		 </td>
+	  </tr>
+	  <tr>
+	     <td colspan="2">
+            <label for="fdescribe">Describe Feedback*</label>
+		 </td>
+      </tr>
+	  <tr>
+		 <td colspan="2">
+            <textarea name="describe feedback" required="required" rows="8" cols="70" id="fdescribe" class="ftextarea"></textarea>
+		 </td>
+	  <tr>
+	     <td colspan="2">
+            <label for="email">E-mail*</label>
+		 </td>
+	  </tr>
+	  <tr>
+	     <td colspan="2">
+            <input type="text" name="email" required="required" placeholder="myname@example.com" id="email" class="ftextarea">
+	     </td>
+	  </tr>
+   </table>
    
 <p>
    <input type="submit" value="Submit" class="fsubmit">
 </p>
 
 </form>
-
 </div>
-
 </body>
-
 </html>

@@ -1121,14 +1121,9 @@ input[type="submit"] {
   text-align: right;
 }
 
-.product_left{
+.product_left, .product_right{
   margin: 35px 0;
-  padding: 20px;
-}
-
-.product_right{
-  margin: 35px 0;
-  padding: 20px;
+  padding: 50px;
 }
 
 .btn--product-details{
@@ -1136,17 +1131,10 @@ input[type="submit"] {
   padding: 10px 15px;
 }
 
-/* change the color */
-.product_left:hover{
-  border: 1px solid grey;
-  background-color: darkgray;
+.product_left:hover, .product_right:hover{
+  background-color: var(--color-gray-700);
+  border-radius: 10px;
 }
-
-.product_right:hover{
-  border: 1px solid grey;
-  background-color: darkgray;
-}
-/* change the color */
 
 /* Product Section */
 
@@ -1231,9 +1219,17 @@ button.scroll-top-btn{
   position: fixed;
   right: 7%;
   bottom: 10%;
-  padding: 15px 17px;
+  padding: 17px 19px;
   border-style: none;
   border-radius: 100%;
+  color: var(--color-gray-900);
+  font-size: 18px;
+  background-color: var(--color-primary-500);
+  transition: background-color .2s var(--ease);
+}
+
+button.scroll-top-btn:hover{
+  background-color: var(--color-primary-400);
 }
 
 button.scroll-top-btn:focus{

@@ -1233,6 +1233,7 @@ footer{
 /* #region Scroll to top button */
 button.scroll-top-btn{
   position: fixed;
+  z-index: 1000;
   right: 7%;
   bottom: 10%;
   padding: 17px 19px;

@@ -1093,15 +1093,15 @@ input[type="submit"] {
 }
 
 .product_details{
-  width: 46%;
+  width: 44%;
   margin-left: 7%;
   background-color: var(--color-gray-700);
   transition: background-color .2s var(--ease);
 }
 
 .product_img_price{
-  margin-right: 7%;
   width: 44%;
+  margin-right: 7%;
   position: absolute;
   z-index: 1;
   right: 0;

@@ -1078,36 +1078,39 @@ input[type="submit"] {
 
 /* #endregion */
 
-/* Product Section */
-.product_left .productpic{
-  float: left;
-  margin-right: 30px;
-}
-
-.product_right .productpic{
-  float: Right;
-  margin-left: 30px;
-}
-
-.productpic{
-  width: 240px;
-}
-
-.product_details_left{
-  margin-left: 50px;
-}
-
-.product_details_right{
-  margin-right: 50px;
-  text-align: right;
-}
-
-.product_left, .product_right{
+/* #region Individual Product */
+.product_container{
   margin: 35px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.product_details, .product_img_price{
+  height: 325px;
+  float: left;
   padding: 50px;
-  border-radius: 10px;
+  border-radius: 15px;
+}
+
+.product_details{
+  width: 46%;
+  margin-left: 7%;
+  background-color: var(--color-gray-700);
+  transition: background-color .2s var(--ease);
+}
+
+.product_img_price{
+  margin-right: 7%;
+  width: 44%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
   background-color: var(--color-gray-800);
   transition: background-color .2s var(--ease);
+}
+
+.product_img{
+  width: 240px;
 }
 
 .btn--product-details{
@@ -1115,13 +1118,9 @@ input[type="submit"] {
   padding: 10px 15px;
 }
 
-.product_left:hover, .product_right:hover{
-  background-color: var(--color-gray-700);
-}
+/* #endregion */
 
-/* Product Section */
-
-/* Contact Page */
+/* #region Contact Page */
 .contact_banner > h1{
   font-size: 28px;
   text-align: center;
@@ -1188,16 +1187,20 @@ input[type="submit"] {
   font-size: 16px;
 }
 
+.contact_info_item li a, .contact_info_item ul li a{
+  transition: color .2s var(--ease);
+}
+
 .contact_info_item li a:hover, .contact_info_item ul li a:hover{
   color: var(--color-primary-500);
 }
-/* Contact Page */
+/* #endregion */
 
 footer{
   clear: both;
 }
 
-/* Scroll to top button */
+/* #region Scroll to top button */
 button.scroll-top-btn{
   position: fixed;
   right: 7%;
@@ -1218,7 +1221,7 @@ button.scroll-top-btn:hover{
 button.scroll-top-btn:focus{
   outline: none;
 }
-/* Scroll to top button */
+/* #endregion */
 
 /* Feedback Form */
 .feedback_form{

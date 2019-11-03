@@ -207,12 +207,77 @@
     })
 
     /**
+     * Product card animation
+     * 
+     * Description:
+     * - Smooth product card view with details slide down
+     */
+    document.querySelectorAll('.product-card').forEach((card) => {
+      const details = card.querySelector('.product-card__details')
+      
+      // Set details height to original height (Height change for animation)
+      const setDetailsHeight = () => {
+        // Remove set height to retrieve original height
+        details.style.height = ''
+        details.style.height = details.getBoundingClientRect().height + 'px'
+      }
+
+      // Start height 0px, so hidden
+      details.style.height = '0'
+
+      // If resizing and card is active, update details height (throttled)
+      window.addEventListener('resize', throttle(() => {
+        if (card.classList.contains('product-card--active')) {
+          setDetailsHeight()
+        }
+      }, 300))
+
+      card.querySelectorAll('.product-card__hero__content__details').forEach((btn) => {
+        const btnIcon = btn.querySelector('i.fas')
+
+        btn.addEventListener('click', () => {
+          card.classList.toggle('product-card--active')
+
+          // If is currently active
+          if (card.classList.contains('product-card--active')) {
+            setDetailsHeight()
+            
+            btnIcon.classList.add('fa-minus-circle')
+            btnIcon.classList.remove('fa-plus-circle')
+          } else {
+            details.style.height = '0'
+
+            btnIcon.classList.add('fa-plus-circle')
+            btnIcon.classList.remove('fa-minus-circle')
+          }
+        })
+      })
+    })
+
+    /**
      * Proper math modulus implementation that handles negative `val`
      * @param {number} val
      * @param {number} by
      */
     function mod (val, by) {
       return (val % by + by) % by
+    }
+
+    /**
+     * Throttles a function
+     * @param {Function} fn Function to be throttled
+     * @param {number} wait Throttle time in ms
+     */
+    function throttle (fn, wait) {
+      let h
+      return function () {
+        if (!h) {
+          h = setTimeout(() => {
+            h = null
+            fn.call(this, arguments)
+          }, wait)
+        }
+      }
     }
   })
 })()

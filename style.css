@@ -1186,6 +1186,7 @@ input[type="submit"] {
   float: left;
   background-color: var(--color-gray-800);
   border-radius: 10px;
+  box-shadow: var(--shadow-6);
 }
 
 .contact_icon{
@@ -1194,6 +1195,7 @@ input[type="submit"] {
   border-top-right-radius: 10px;
   height: 225px;
   padding-top: 7%;
+  box-shadow: var(--shadow-4);
 }
 
 .contact_info{

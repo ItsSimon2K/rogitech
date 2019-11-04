@@ -17,6 +17,20 @@
     /**
      * Carousel
      * 
+     * Usage:
+     * - Example carousel structure:
+     *   <div class="carousel">
+     *     <div class="carousel__controls">
+     *       <button class="carousel__controls__backward"></button>
+     *       <button class="carousel__controls__forward"></button>
+     *     </div>
+     *     <div class="carousel__view">
+     *       <div class="carousel__view__slide"></div>
+     *       <div class="carousel__view__slide"></div>
+     *       <div class="carousel__view__slide"></div>
+     *     </div>
+     *   </div>
+     * 
      * Description:
      * - Only supports fade transitions
      * - Consists of `view` and `controls`
@@ -88,6 +102,9 @@
     /**
      * Fader
      * 
+     * Usage:
+     * - Add `fader` class on target element
+     * 
      * Description:
      * - Fades an element in with CSS `transform` and `opacity`
      * - Uses `IntersectionObserver` to check visibility
@@ -150,6 +167,9 @@
     /**
      * Simple Parallax
      * https://simpleparallax.com
+     * 
+     * Usage:
+     * - Add `parallax` class on target img
      */
     if (!reducedMotion && typeof simpleParallax !== 'undefined') {
       new simpleParallax(document.querySelectorAll('.parallax'), {
@@ -170,6 +190,9 @@
 
     /**
      * Fake load
+     * 
+     * Usage:
+     * - Add `fake-load` class on target form
      * 
      * Description:
      * - When submit form, fake loads nothing
@@ -259,6 +282,9 @@
 
     /**
      * Img view
+     * 
+     * Usage:
+     * - Add `img-view` class on target img
      * 
      * Description:
      * - Show fullscreen image on click

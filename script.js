@@ -8,7 +8,7 @@
  * - ES6 syntax
  * - No semicolon (ASI)
  * - JSDoc comments
- * - Namespaced
+ * - Namespaced (IIFE)
  */
 (() => {
   window.addEventListener('load', () => {
@@ -99,50 +99,53 @@
      * - `data-fader-delay`: Transition delay. (Default: `.1s`)
      * - `data-fader-easing`: Transition easing. (Default: `ease`)
      */
-    const faderObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        // Check visibility and fade in
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1'
-          entry.target.style.transform = 'translate3d(0, 0, 0)'
-        }
+    ;(() => {
+      const faderObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          // Check visibility and fade in
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1'
+            entry.target.style.transform = 'translate3d(0, 0, 0)'
+          }
+        })
       })
-    })
-    document.querySelectorAll('.fader').forEach((fader) => {
-      // In cases where the page load from the middle, those above should not be animated
-      if (fader.getBoundingClientRect().bottom <= 0) { return }
 
-      const {
-        faderMove: move = '12px',
-        faderDirection: direction = 'up',
-        faderDuration: duration = '1s',
-        faderDelay: delay = '.1s',
-        faderEasing: easing = 'ease'
-      } = fader.dataset
-
-      fader.style.opacity = 0
-
-      if (!reducedMotion) {
-        switch (direction) {
-          case 'up':
-            fader.style.transform = `translate3d(0, ${move}, 0)`
-            break
-          case 'down':
-            fader.style.transform = `translate3d(0, -${move}, 0)`
-            break
-          case 'left':
-            fader.style.transform = `translate3d(${move}, 0, 0)`
-            break
-          case 'right':
-            fader.style.transform = `translate3d(-${move}, 0, 0)`
-            break
+      document.querySelectorAll('.fader').forEach((fader) => {
+        // In cases where the page load from the middle, those above should not be animated
+        if (fader.getBoundingClientRect().bottom <= 0) { return }
+  
+        const {
+          faderMove: move = '12px',
+          faderDirection: direction = 'up',
+          faderDuration: duration = '1s',
+          faderDelay: delay = '.1s',
+          faderEasing: easing = 'ease'
+        } = fader.dataset
+  
+        fader.style.opacity = 0
+  
+        if (!reducedMotion) {
+          switch (direction) {
+            case 'up':
+              fader.style.transform = `translate3d(0, ${move}, 0)`
+              break
+            case 'down':
+              fader.style.transform = `translate3d(0, -${move}, 0)`
+              break
+            case 'left':
+              fader.style.transform = `translate3d(${move}, 0, 0)`
+              break
+            case 'right':
+              fader.style.transform = `translate3d(-${move}, 0, 0)`
+              break
+          }
         }
-      }
-
-      fader.style.transition = `all ${duration} ${delay} ${easing}`
-
-      faderObserver.observe(fader)
-    })
+  
+        fader.style.transition = `all ${duration} ${delay} ${easing}`
+  
+        faderObserver.observe(fader)
+      })
+    })()
 
     /**
      * Simple Parallax
@@ -260,33 +263,37 @@
      * Description:
      * - Show fullscreen image on click
      */
-    const imgViews = document.querySelectorAll('.img-view')
-    let showImg
-    if (imgViews.length > 0) {
-      // Create img-viewer div
-      const viewer = document.createElement('div')
-      viewer.classList.add('img-viewer')
-      viewer.addEventListener('click', () => viewer.classList.remove('img-viewer--show'))
+    ;(() => {
+      const imgViews = document.querySelectorAll('.img-view')
+      let showImg
 
-      // Create img-viewer img 
-      const img = document.createElement('img')
-      img.classList.add('img-viewer__img')
-      viewer.appendChild(img)
-
-      // Hook showImg function 
-      showImg = (src, alt) => {
-        img.setAttribute('src', src)
-        img.setAttribute('alt', alt)
-        viewer.classList.add('img-viewer--show')
+      if (imgViews.length > 0) {
+        // Create img-viewer div
+        const viewer = document.createElement('div')
+        viewer.classList.add('img-viewer')
+        viewer.addEventListener('click', () => viewer.classList.remove('img-viewer--show'))
+  
+        // Create img-viewer img 
+        const img = document.createElement('img')
+        img.classList.add('img-viewer__img')
+        viewer.appendChild(img)
+  
+        // Hook showImg function 
+        showImg = (src, alt) => {
+          img.setAttribute('src', src)
+          img.setAttribute('alt', alt)
+          viewer.classList.add('img-viewer--show')
+        }
+  
+        document.body.appendChild(viewer)
       }
 
-      document.body.appendChild(viewer)
-    }
-    imgViews.forEach((view) => {
-      view.addEventListener('click', () => {
-        showImg(view.getAttribute('src'), view.getAttribute('alt'))
+      imgViews.forEach((view) => {
+        view.addEventListener('click', () => {
+          showImg(view.getAttribute('src'), view.getAttribute('alt'))
+        })
       })
-    })
+    })()
 
     /**
      * Proper math modulus implementation that handles negative `val`

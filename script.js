@@ -255,6 +255,40 @@
     })
 
     /**
+     * Img view
+     * 
+     * Description:
+     * - Show fullscreen image on click
+     */
+    const imgViews = document.querySelectorAll('.img-view')
+    let showImg
+    if (imgViews.length > 0) {
+      // Create img-viewer div
+      const viewer = document.createElement('div')
+      viewer.classList.add('img-viewer')
+      viewer.addEventListener('click', () => viewer.classList.remove('img-viewer--show'))
+
+      // Create img-viewer img 
+      const img = document.createElement('img')
+      img.classList.add('img-viewer__img')
+      viewer.appendChild(img)
+
+      // Hook showImg function 
+      showImg = (src, alt) => {
+        img.setAttribute('src', src)
+        img.setAttribute('alt', alt)
+        viewer.classList.add('img-viewer--show')
+      }
+
+      document.body.appendChild(viewer)
+    }
+    imgViews.forEach((view) => {
+      view.addEventListener('click', () => {
+        showImg(view.getAttribute('src'), view.getAttribute('alt'))
+      })
+    })
+
+    /**
      * Proper math modulus implementation that handles negative `val`
      * @param {number} val
      * @param {number} by

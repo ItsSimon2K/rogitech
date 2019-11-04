@@ -264,6 +264,44 @@ input[type="submit"] {
 
 /* #endregion */
 
+/* #region Img view */
+
+/* The fullscreen overlay */
+.img-viewer {
+  visibility: hidden;
+  position: fixed;
+  z-index: 2019;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, .5);
+  transition: opacity .2s var(--ease), visibility .2s .2s;
+}
+
+.img-viewer--show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .2s var(--ease);
+}
+
+.img-viewer__img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  transform: scale(.8);
+  transition: transform .2s var(--ease);
+}
+
+.img-viewer--show .img-viewer__img {
+  transform: scale(1);
+}
+
+/* #endregion */
+
 /* #region Card */
 
 .card {
@@ -1151,9 +1189,11 @@ input[type="submit"] {
   height: 100%;
 }
 
+/* No pointer events so underlying img can be clicked */
 .product-card__hero__content {
   position: relative;
   padding: 2rem;
+  pointer-events: none;
 }
 
 .product-card__hero__content__title {
@@ -1169,6 +1209,7 @@ input[type="submit"] {
   border-radius: .25rem;
   outline: none;
   overflow: hidden;
+  pointer-events: visible;
 }
 
 .product-card__details {

@@ -1214,6 +1214,24 @@ input[type="submit"] {
   transition: transform .3s .2s var(--ease), opacity .3s .2s var(--ease), height .3s .2s var(--ease);
 }
 
+.product-card__table{
+  border-collapse: collapse;
+}
+
+.product-card__table td, .product-card__table th{
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.product-card__table tr:first-child td, .product-card__table tr:first-child th{
+  border:none;
+  padding-top: 2rem;
+}
+
+.product-card__table tr:last-child td, .product-card__table tr:last-child th{
+  padding-bottom: 2rem;
+}
 /* #endregion */
 
 /* #region Img scroller */
@@ -1261,7 +1279,6 @@ input[type="submit"] {
 
 .contact_content{
   text-align: center;
-
 }
 
 .contact_container{

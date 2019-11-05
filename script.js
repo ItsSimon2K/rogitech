@@ -258,10 +258,15 @@
         }
       }, 300))
 
-      card.querySelectorAll('.product-card__hero__content__details').forEach((btn) => {
-        const btnIcon = btn.querySelector('i.fas')
+      card.querySelectorAll('.product-card__hero').forEach((hero) => {
+        const btnIcon = hero.querySelector('.product-card__hero__content__details > i.fas')
 
-        btn.addEventListener('click', () => {
+        // Stop button event propagation so it doesn't trigger hero click
+        hero.querySelectorAll('button').forEach((btn) => {
+          btn.addEventListener('click', (evt) => evt.stopPropagation())
+        })
+
+        hero.addEventListener('click', () => {
           card.classList.toggle('product-card--active')
 
           // If is currently active

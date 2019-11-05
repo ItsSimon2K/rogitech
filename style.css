@@ -1189,27 +1189,34 @@ input[type="submit"] {
   height: 100%;
 }
 
-/* No pointer events so underlying img can be clicked */
 .product-card__hero__content {
   position: relative;
   padding: 2rem;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .product-card__hero__content__title {
   margin-top: 0;
+  margin-bottom: .8rem;
 }
 
 .product-card__hero__content__details {
-  font-weight: 600;
-  color: var(--color-primary-500);
-  background-color: transparent;
-  padding: .5rem 1rem;
-  border: none;
-  border-radius: .25rem;
-  outline: none;
-  overflow: hidden;
-  pointer-events: visible;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  opacity: .8;
+}
+
+.product-card__hero__content__list {
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 2rem;
+  list-style-position: inside;
+  opacity: .8;
+}
+
+.product-card__hero__content__list > li {
+  margin: .5rem 0;
 }
 
 .product-card__details {
@@ -1496,7 +1503,7 @@ button.scroll-top-btn:focus{
     background-color: var(--color-gray-700);
   }
 
-  .product-card__hero__content__text {
+  .product-card__hero__content__list {
     width: 26vw;
   }
 }

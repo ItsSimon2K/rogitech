@@ -82,6 +82,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 input, select, textarea {
   padding: .25rem .5rem;
   margin: .5rem 0;
@@ -1206,6 +1210,7 @@ input[type="submit"] {
 }
 
 .product-card__hero__content__title {
+  font-weight: 300;
   margin-top: 0;
   margin-bottom: .8rem;
 }
@@ -1523,10 +1528,11 @@ button.scroll-top-btn:focus{
     z-index: -1;
     top: 0;
     left: 0;
-    width: 70vw;
-    height: 70vw;
+    width: 700px;
+    height: 700px;
     background-color: var(--color-gray-800);
     border-radius: 50%;
+    box-shadow: var(--shadow-2);
     transform: translateX(-50%) translateY(-50%);
     transition: background-color .2s var(--ease);
   }

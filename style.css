@@ -430,6 +430,36 @@ input[type="submit"] {
   opacity: 1;
 }
 
+.mini-card__content__icon {
+  color: var(--color-primary-500);
+}
+
+.mini-card:hover .mini-card__content__icon {
+  animation: wiggle .4s linear;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  25% {
+    transform: rotateZ(-3deg);
+  }
+
+  50% {
+    transform: rotateZ(0);
+  }
+
+  75% {
+    transform: rotateZ(3deg);
+  }
+
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
 .mini-card__content__title {
   margin: .25rem;
   font-size: 1.2rem;
@@ -602,7 +632,10 @@ input[type="submit"] {
 } */
 
 .blockquote__quote {
+  font-size: 1.1rem;
+  line-height: 150%;
   margin-left: 0;
+  margin-right: 0;
 }
 
 .blockquote__caption {
@@ -1394,6 +1427,52 @@ address{
 
 /* Feedback Form */
 
+/* #region About page */
+
+.about-bio {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.about-bio__left {
+  flex: 1;
+  text-align: justify;
+}
+
+.about-bio__right {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.about-bio__right figcaption {
+  opacity: .8;
+  margin: .5rem 0;
+}
+
+.about-quote {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.about-quote__icon {
+  color: var(--color-primary-200);
+}
+
+.about-quote__quote {
+  flex: 1;
+  margin: 0;
+  margin-left: 2rem;
+}
+
+.about-quote__quote blockquote {
+  margin-top: 0;
+}
+
+/* #endregion */
+
 /* #region Breakpoints */
 
 @media (min-width: 576px) {
@@ -1417,6 +1496,12 @@ address{
 @media (min-width: 768px) {
   .container {
     width: 720px;
+  }
+
+
+  .about-quote {
+    width: 60%;
+    margin-left: auto;
   }
 }
 
@@ -1511,6 +1596,17 @@ address{
 
   .product-card__hero__content__list {
     width: 26vw;
+  }
+
+
+  .about-bio {
+    flex-direction: row;
+  }
+
+  .about-bio__left {
+    flex: 1;
+    text-align: justify;
+    margin-right: 2rem;
   }
 }
 

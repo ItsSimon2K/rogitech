@@ -1131,45 +1131,6 @@ input[type="submit"] {
 /* #endregion */
 
 /* #region Individual Product */
-.product_container{
-  margin: 35px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.product_details, .product_img_price{
-  height: 325px;
-  float: left;
-  padding: 50px;
-  border-radius: 15px;
-}
-
-.product_details{
-  width: 44%;
-  margin-left: 7%;
-  background-color: var(--color-gray-700);
-  transition: background-color .2s var(--ease);
-}
-
-.product_img_price{
-  width: 44%;
-  margin-right: 7%;
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  background-color: var(--color-gray-800);
-  transition: background-color .2s var(--ease);
-}
-
-.product_img{
-  width: 240px;
-}
-
-.btn--product-details{
-  margin: 10px auto 0;
-  padding: 10px 15px;
-}
-
 .product-card {
   position: relative;
   margin: 2rem 0;

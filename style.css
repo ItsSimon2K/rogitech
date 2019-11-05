@@ -60,6 +60,12 @@
   box-sizing: border-box;
 }
 
+* {
+  scrollbar-color: #2a2c2e #1c1e1f;
+  scrollbar-color: dark;
+  -webkit-scrollbar-color: dark;
+}
+
 html, body {
   font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0;

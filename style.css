@@ -1332,10 +1332,6 @@ address{
 
 /* #endregion */
 
-footer{
-  clear: both;
-}
-
 /* #region Scroll to top button */
 button.scroll-top-btn{
   position: fixed;

@@ -1164,6 +1164,7 @@ input[type="submit"] {
 /* #endregion */
 
 /* #region Individual Product */
+
 .product-card {
   position: relative;
   margin: 2rem 0;
@@ -1231,7 +1232,7 @@ input[type="submit"] {
 .product-card__details {
   position: relative;
   z-index: 1;
-  padding: 2rem;
+  padding: 0 2rem;
   border-radius: 10px;
   box-shadow: var(--shadow-3);
   background-color: var(--color-gray-800);
@@ -1242,6 +1243,7 @@ input[type="submit"] {
 }
 
 .product-card--active .product-card__details {
+  padding: 2rem;
   transform: translateY(-2rem);
   opacity: 1;
   transition: transform .3s .2s var(--ease), opacity .3s .2s var(--ease), height .3s .2s var(--ease);

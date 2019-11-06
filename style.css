@@ -1420,12 +1420,17 @@ address{
   color: var(--color-gray-900);
   font-size: 18px;
   background-color: var(--color-primary-500);
-  transition: background-color .2s var(--ease);
+  transform: scale(0);
+  transition: background-color .2s var(--ease), transform .2s var(--ease);
 }
 
 .scroll-top-btn:hover, .scroll-top-btn:focus{
   outline: none;
   background-color: var(--color-primary-400);
+}
+
+.scroll-top-btn.show {
+  transform: scale(1);
 }
 
 /* #endregion */

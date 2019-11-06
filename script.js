@@ -178,15 +178,30 @@
       })
     }
 
-    // Scroll to Top Button     
-    document.querySelectorAll('.scroll-top-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        window.scrollTo({
-          top: 0,
-          behavior: reducedMotion ? 'auto' : 'smooth'
+    // Scroll to Top Button
+    ;(() => {
+      const scrollTopBtns = document.querySelectorAll('.scroll-top-btn')
+      const checkScroll = () => {
+        if (window.scrollY === 0) {
+          scrollTopBtns.forEach(btn => btn.classList.remove('show'))
+        } else {
+          scrollTopBtns.forEach(btn => btn.classList.add('show'))
+        }
+      }
+
+      checkScroll()
+
+      window.addEventListener('scroll', throttle(checkScroll, 300))
+
+      scrollTopBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: reducedMotion ? 'auto' : 'smooth'
+          })
         })
       })
-    })
+    })()
 
     /**
      * Fake load

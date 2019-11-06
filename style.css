@@ -430,6 +430,11 @@ input[type="submit"] {
   opacity: 1;
 }
 
+.mini-card__content__avatar {
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, .5);
+}
+
 .mini-card__content__icon {
   color: var(--color-primary-500);
 }
@@ -461,12 +466,13 @@ input[type="submit"] {
 }
 
 .mini-card__content__title {
-  margin: .25rem;
+  margin: .4rem 0;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 .mini-card__content__text {
+  margin: .4rem 0;
   font-size: .9rem;
   opacity: .8;
 }
@@ -1488,6 +1494,10 @@ address{
 
 .about-quote__quote blockquote {
   margin-top: 0;
+}
+
+.about-team__card {
+  width: 180px;
 }
 
 /* #endregion */

@@ -240,7 +240,8 @@
      */
     document.querySelectorAll('.product-card').forEach((card) => {
       const details = card.querySelector('.product-card__details')
-      
+      const btnIcon = card.querySelector('.product-card__hero__content__details > i.fas')
+
       // Set details height to original height (Height change for animation)
       const setDetailsHeight = () => {
         // Remove set height to retrieve original height
@@ -248,41 +249,43 @@
         details.style.height = details.getBoundingClientRect().height + 'px'
       }
 
-      // Start height 0px, so hidden
-      details.style.height = '0'
+      // Open product details
+      const open = () => {
+        card.classList.add('product-card--active')
+        setDetailsHeight()
+        btnIcon.classList.add('fa-minus-circle')
+        btnIcon.classList.remove('fa-plus-circle')
+      }
+
+      // Close product details
+      const close = () => {
+        card.classList.remove('product-card--active')
+        details.style.height = '0'
+        btnIcon.classList.add('fa-plus-circle')
+        btnIcon.classList.remove('fa-minus-circle')
+      }
+
+      // Default close
+      close()
 
       // If resizing and card is active, update details height (throttled)
-      window.addEventListener('resize', throttle(() => {
-        if (card.classList.contains('product-card--active')) {
-          setDetailsHeight()
-        }
-      }, 300))
+      const updateHeight = () => card.classList.contains('product-card--active') && setDetailsHeight()
+      window.addEventListener('resize', throttle(updateHeight, 300))
 
-      card.querySelectorAll('.product-card__hero').forEach((hero) => {
-        const btnIcon = hero.querySelector('.product-card__hero__content__details > i.fas')
+      // Check if hash equal this card, and open
+      const checkHash = () => (window.location.hash === '#' + card.id) && open()
 
-        // Stop button event propagation so it doesn't trigger hero click
-        hero.querySelectorAll('button').forEach((btn) => {
-          btn.addEventListener('click', (evt) => evt.stopPropagation())
-        })
+      // Check hash and listen changes
+      checkHash()
+      window.addEventListener('hashchange', debounce(checkHash, 300))
 
-        hero.addEventListener('click', () => {
-          card.classList.toggle('product-card--active')
+      // Stop button event propagation so it doesn't trigger hero click
+      const btnStop = evt => evt.stopPropagation()
+      card.querySelectorAll('.product-card__hero button').forEach(btn => btn.addEventListener('click', btnStop))
 
-          // If is currently active
-          if (card.classList.contains('product-card--active')) {
-            setDetailsHeight()
-            
-            btnIcon.classList.add('fa-minus-circle')
-            btnIcon.classList.remove('fa-plus-circle')
-          } else {
-            details.style.height = '0'
-
-            btnIcon.classList.add('fa-plus-circle')
-            btnIcon.classList.remove('fa-minus-circle')
-          }
-        })
-      })
+      // Toggle card
+      const toggleCard = () => card.classList.contains('product-card--active') ? close() : open()
+      card.querySelector('.product-card__hero').addEventListener('click', toggleCard)
     })
 
     /**
@@ -333,6 +336,19 @@
      */
     function mod (val, by) {
       return (val % by + by) % by
+    }
+
+    /**
+     * Debounces a function
+     * @param {Function} fn Function to be debounced
+     * @param {number} wait Debounce time in ms
+     */
+    function debounce (fn, wait) {
+      let h
+      return function () {
+        clearTimeout(h)
+        h = setTimeout(() => fn.apply(this, arguments), wait)
+      }
     }
 
     /**

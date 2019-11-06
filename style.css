@@ -74,6 +74,7 @@ html, body {
   color: var(--color-primary-100);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -1267,6 +1268,7 @@ input[type="submit"] {
 .product-card__table tr:last-child td, .product-card__table tr:last-child th{
   padding-bottom: 2rem;
 }
+
 /* #endregion */
 
 /* #region Img scroller */
@@ -1292,6 +1294,7 @@ input[type="submit"] {
 /* #endregion */
 
 /* #region Contact Page */
+
 .contact_banner > h1{
   font-size: 28px;
   text-align: center;
@@ -1383,6 +1386,7 @@ input[type="submit"] {
 address{
   font-style: normal;
 }
+
 /* #endregion */
 
 /* #region report a problem page*/

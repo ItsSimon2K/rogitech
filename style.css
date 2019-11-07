@@ -1256,23 +1256,26 @@ input[type="submit"] {
   transition: transform .3s .2s var(--ease), opacity .3s .2s var(--ease), height .3s .2s var(--ease);
 }
 
-.product-card__table{
+.product-card__table {
   border-collapse: collapse;
+  width: 100%;
 }
 
-.product-card__table td, .product-card__table th{
-  padding: .75rem;
-  vertical-align: top;
+.product-card__table tr {
   border-top: 1px solid rgba(255, 255, 255, .2);
 }
 
-.product-card__table tr:first-child td, .product-card__table tr:first-child th{
-  border:none;
-  padding-top: 2rem;
+.product-card__table tr:first-child {
+  border: none;
 }
 
-.product-card__table tr:last-child td, .product-card__table tr:last-child th{
-  padding-bottom: 2rem;
+.product-card__table td, .product-card__table th {
+  padding: .75rem;
+  vertical-align: top;
+}
+
+.product-card__table tr th:first-child {
+  text-align: left;
 }
 
 /* #endregion */

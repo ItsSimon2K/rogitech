@@ -70,6 +70,7 @@ html, body {
   font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0;
   margin: 0;
+  height: 100%;
   background-color: var(--color-gray-900);
   color: var(--color-primary-100);
   -webkit-font-smoothing: antialiased;
@@ -313,6 +314,25 @@ input[type="submit"] {
 
 .img-view {
   cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region Iconify */
+
+.iconify__icon {
+  opacity: 0;
+  animation: fade-in-out infinite linear alternate;
+}
+
+@keyframes fade-in-out {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: .2;
+  }
 }
 
 /* #endregion */

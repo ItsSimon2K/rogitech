@@ -1462,6 +1462,11 @@ address{
   color: white;
 }
 
+.star_rating{
+    float: center;
+    height: 46px;
+}
+
 /* Feedback Form */
 
 /* #region About page */

@@ -345,6 +345,75 @@
     })()
 
     /**
+     * Iconify
+     * 
+     * Usgae:
+     * - Add `iconify` class on target element
+     * 
+     * Description:
+     * - Randomly spawn icon on background
+     * - Icons are not evenly distributed
+     * - Icons fade with the help of `style.css`
+     * 
+     * Data:
+     * - `data-iconify-num`: Number of icons. (Default: 10)
+     * - `data-iconify-sets`: List of comma-separated classes to be randomly applied to an icon. (Default: `fas fa-heart`)
+     * - `data-iconify-font-size`: The random font size, comma-separated min and max. (Default: 30, 50)
+     * - `data-iconify-spawn-area`: The areas to spawn icons, comma-separated string with format `x-min x-max y-min y-max` (values are in %). (Default: 5 95 5 95)
+     * - `data-iconify-rotate`: The random icon rotation (in degrees), comma-separated min and max. (Default: -50, 50)
+     * - `data-iconify-duration`: The random icon fade duration (in seconds), comma-separated min and max. (Default: 5, 8)
+     * - `data-iconify-delay`: The random icon fade delay (in seconds), comma-separated min and max. (Default: 0, 3)
+     */
+    document.querySelectorAll('.iconify').forEach((el) => {
+      const {
+        iconifyNum: num = 10,
+        iconifySets: sets = 'fas fa-heart',
+        iconifyFontSize: fontSize = '30, 50',
+        iconifySpawnArea: areas = '5 95 5 95',
+        iconifyRotate: rotate = '-50, 50',
+        iconifyDuration: duration = '5, 8',
+        iconifyDelay: delay = '0, 3'
+      } = el.dataset
+
+      // Split datas to retrive min max and iterables
+      const [fontSizeMin, fontSizeMax = fontSizeMin] = splitStr(fontSize, ',')
+      const [rotateMin, rotateMax = rotateMin] = splitStr(rotate, ',')
+      const [durationMin, durationMax = durationMin] = splitStr(duration, ',')
+      const [delayMin, delayMax = delayMin] = splitStr(delay, ',')
+      const iconSets = splitStr(sets, ',')
+      const spawnAreas = splitStr(areas, ',').map(v => splitStr(v, ' ')).filter(v => v.length >= 4)
+
+      // Spawn number per area
+      const iconPerArea = Math.floor(+num / spawnAreas.length)
+
+      // If element is `static` (icons can't relatively position), set to `relative`
+      if (window.getComputedStyle(el).position === 'static') {
+        el.style.position = 'relative'
+      }
+
+      for (const area of spawnAreas) {
+        for (let i = 0; i < iconPerArea; i++) {
+          const icon = document.createElement('i')
+          // Add default icon class and user defined class
+          icon.className = 'iconify__icon ' + iconSets[randomInt(0, iconSets.length)]
+          // A11y icon should be hidden from screen readers
+          icon.setAttribute('aria-hidden', 'true')
+          // Apply random position, size, rotation and fade delay
+          icon.style.cssText = `
+            position: absolute;
+            top: ${randomInt(area[2], area[3])}%;
+            left: ${randomInt(area[0], area[1])}%;
+            font-size: ${randomInt(+fontSizeMin, +fontSizeMax)}px;
+            transform: translateX(-50%) translateY(-50%) rotate(${randomInt(+rotateMin, +rotateMax)}deg);
+            animation-duration: ${randomFloat(+durationMin, +durationMax)}s;
+            animation-delay: ${randomFloat(+delayMin, +delayMax)}s;
+          `
+          el.prepend(icon)
+        }
+      }
+    })
+
+    /**
      * Proper math modulus implementation that handles negative `val`
      * @param {number} val
      * @param {number} by
@@ -381,6 +450,31 @@
           }, wait)
         }
       }
+    }
+
+    /**
+     * Split, trim and filter a string
+     */
+    function splitStr (str, separator) {
+      return str.split(separator).map(v => v.trim()).filter(v => !!v)
+    }
+
+    /**
+     * Get random number between `min` (Inclusive) and `max` (Exclusive)
+     * @param {number} min Min number (Inclusive)
+     * @param {number} max Max number (exclusive)
+     */
+    function randomFloat (min, max) {
+      return Math.random() * (max - min) + min
+    }
+
+    /**
+     * Get random integer between `min` (Inclusive) and `max` (Exclusive)
+     * @param {number} min Min integer (Inclusive)
+     * @param {number} max Max integer (exclusive)
+     */
+    function randomInt (min, max) {
+      return Math.floor(randomFloat(Math.ceil(min), Math.floor(max)))
     }
   })
 })()

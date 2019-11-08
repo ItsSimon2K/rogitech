@@ -1303,14 +1303,14 @@ input[type="submit"] {
 /* #region Img scroller */
 
 .img-scroller {
-  display: flex;
-  flex-direction: row;
   scroll-snap-type: x proximity;
   overflow-x: auto;
   overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .img-scroller__item {
+  display: inline-block;
   position: relative;
   scroll-snap-align: start;
   border-radius: 15px;

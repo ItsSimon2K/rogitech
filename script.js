@@ -363,6 +363,7 @@
      * - `data-iconify-rotate`: The random icon rotation (in degrees), comma-separated min and max. (Default: -50, 50)
      * - `data-iconify-duration`: The random icon fade duration (in seconds), comma-separated min and max. (Default: 5, 8)
      * - `data-iconify-delay`: The random icon fade delay (in seconds), comma-separated min and max. (Default: 0, 3)
+     * - `data-iconify-min-distance`: The min separation distance between icons, in percent (Default: 10)
      */
     document.querySelectorAll('.iconify').forEach((el) => {
       const {
@@ -372,7 +373,8 @@
         iconifySpawnArea: areas = '5 95 5 95',
         iconifyRotate: rotate = '-50, 50',
         iconifyDuration: duration = '5, 8',
-        iconifyDelay: delay = '0, 3'
+        iconifyDelay: delay = '0, 3',
+        iconifyMinDistance: distance = 10
       } = el.dataset
 
       // Split datas to retrive min max and iterables
@@ -386,6 +388,13 @@
       // Spawn number per area
       const iconPerArea = Math.floor(+num / spawnAreas.length)
 
+      // Square distance for efficent calculation
+      const sqrDistance = distance * distance
+      // All of the icon points are recorded to make sure they're separated by minimum radius
+      const iconPoints = []
+      // Max retries if unable to find point
+      const maxRetries = 5
+
       // If element is `static` (icons can't relatively position), set to `relative`
       if (window.getComputedStyle(el).position === 'static') {
         el.style.position = 'relative'
@@ -398,11 +407,37 @@
           icon.className = 'iconify__icon ' + iconSets[randomInt(0, iconSets.length)]
           // A11y icon should be hidden from screen readers
           icon.setAttribute('aria-hidden', 'true')
+
+          let x, y
+
+          // Get position
+          for (let j = 0; j < maxRetries; j++) {
+            let tooClose = false
+
+            x = randomInt(area[0], area[1])
+            y = randomInt(area[2], area[3])
+            
+            for (const point of iconPoints) {
+              const xDif = point.x - x
+              const yDif = point.y - y
+              // If the new point is too close to another point
+              if (xDif * xDif + yDif * yDif < sqrDistance) {
+                tooClose = true
+                break
+              }
+            }
+
+            if (!tooClose) {
+              iconPoints.push({ x, y })
+              break
+            }
+          }
+
           // Apply random position, size, rotation and fade delay
           icon.style.cssText = `
             position: absolute;
-            top: ${randomInt(area[2], area[3])}%;
-            left: ${randomInt(area[0], area[1])}%;
+            top: ${x}%;
+            left: ${y}%;
             font-size: ${randomInt(+fontSizeMin, +fontSizeMax)}px;
             transform: translateX(-50%) translateY(-50%) rotate(${randomInt(+rotateMin, +rotateMax)}deg);
             animation-duration: ${randomFloat(+durationMin, +durationMax)}s;

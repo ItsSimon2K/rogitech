@@ -1565,28 +1565,28 @@ address{
 	width: 26%;
 	padding: 8%;
 	border-radius: 15px;
+	background-color: var(--color-primary-500);
 }
 
 .main_keyboard_button {
 	width: 26%;
 	padding: 8%;
 	border-radius: 15px;
+	background-color: var(--color-primary-500);
 }
 
 .main_headphones_button {
 	width: 26%;
 	padding: 8%;
 	border-radius: 15px;
+	background-color: var(--color-primary-500);
 }
 
 .main_speakers_button {
 	width: 26%;
 	padding: 8%;
 	border-radius: 15px;
-}
-
-.in_button_text {
-	font-size: 16px;
+	background-color: var(--color-primary-500);
 }
 
 /* #region About page */

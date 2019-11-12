@@ -49,6 +49,11 @@
   --shadow-5: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
   --shadow-6: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
   
+  --radius-1: .25rem;
+  --radius-2: .5rem;
+  --radius-3: .75rem;
+  --radius-4: 1rem;
+
   --ease: cubic-bezier(0, .2, .4, 1);
 }
 
@@ -94,7 +99,7 @@ button {
 input, select, textarea {
   padding: .25rem .5rem;
   margin: .5rem 0;
-  border-radius: .25rem;
+  border-radius: var(--radius-1);
   border: none;
   outline: none;
   overflow: hidden;
@@ -133,7 +138,7 @@ input[type="submit"] {
   right: 0;
   width: auto;
   padding: .5rem;
-  border-radius: .25rem;
+  border-radius: var(--radius-1);
   background-color: var(--color-gray-700);
   box-shadow: var(--shadow-2);
   opacity: 0;
@@ -328,7 +333,7 @@ input[type="submit"] {
   color: var(--color-primary-100);
   background-color: var(--color-gray-700);
   padding: 1rem;
-  border-radius: .25rem;
+  border-radius: var(--radius-1);
   overflow: hidden;
   box-shadow: var(--shadow-0);
 }
@@ -384,7 +389,7 @@ input[type="submit"] {
 .mini-card {
   position: relative;
   display: inline-block;
-  border-radius: .25rem;
+  border-radius: var(--radius-1);
   overflow: hidden;
   background-color: var(--color-gray-700);
 }
@@ -497,7 +502,7 @@ input[type="submit"] {
   flex-wrap: wrap;
   align-items: center;
   margin: .25rem;
-  border-radius: .25rem;
+  border-radius: var(--radius-1);
   transition: all .2s var(--ease);
 }
 
@@ -571,7 +576,7 @@ input[type="submit"] {
   background-color: var(--color-primary-100);
   padding: .5rem 1rem;
   border: none;
-  border-radius: .25rem;
+  border-radius: var(--radius-1);
   outline: none;
   overflow: hidden;
 }
@@ -607,7 +612,7 @@ input[type="submit"] {
   width: 2.5rem;
   height: 2.5rem;
   padding: .5rem;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .btn--icon::before {
@@ -670,7 +675,7 @@ input[type="submit"] {
 .newsletter__form {
   display: flex;
   flex-direction: row;
-  border-radius: .25rem;
+  border-radius: var(--radius-1);
   overflow: hidden;
 }
 
@@ -831,7 +836,7 @@ input[type="submit"] {
   padding: 1rem;
   margin: 0;
   background-color: var(--color-gray-700);
-  border-radius: .25rem;
+  border-radius: var(--radius-1);
   box-shadow: var(--shadow-6);
   list-style: none;
   opacity: 0;
@@ -1184,7 +1189,7 @@ input[type="submit"] {
 .product-card__hero {
   position: relative;
   z-index: 2;
-  border-radius: 10px;
+  border-radius: var(--radius-3);
   box-shadow: var(--shadow-3);
   background-color: var(--color-gray-800);
   overflow: hidden;
@@ -1244,7 +1249,7 @@ input[type="submit"] {
   position: relative;
   z-index: 1;
   padding: 0 2rem;
-  border-radius: 10px;
+  border-radius: var(--radius-3);
   box-shadow: var(--shadow-3);
   background-color: var(--color-gray-800);
   overflow: hidden;
@@ -1297,7 +1302,7 @@ input[type="submit"] {
   display: inline-block;
   position: relative;
   scroll-snap-align: start;
-  border-radius: 15px;
+  border-radius: var(--radius-4);
   margin-right: .8rem;
   overflow: hidden;
 }
@@ -1422,7 +1427,7 @@ input[type="submit"] {
   padding: 0;
   float: left;
   background-color: var(--color-gray-800);
-  border-radius: 10px;
+  border-radius: var(--radius-3);
   box-shadow: var(--shadow-6);
 }
 
@@ -1527,7 +1532,7 @@ address {
   bottom: 3rem;
   padding: 17px 19px;
   border-style: none;
-  border-radius: 100%;
+  border-radius: 50%;
   box-shadow: var(--shadow-6);
   color: var(--color-gray-900);
   font-size: 18px;

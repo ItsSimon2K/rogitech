@@ -148,64 +148,69 @@
 
   <!-- content start -->
   <main class="container">
-    <div class="report_form">
+    <h1 class="text-center">Report a problem</h1>
+    <div class="app-card card">
       <form name="report a problem" method="post" action="mailto:">
-        <fieldset>
-          <table>
-            <tr>
-              <td>
-                <label for="F_Name">First name*</label>
-              </td>
-              <td>
-                <label for="L_Name">Last name*</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input id="F_Name" type="text" required="required">
-              </td>
-              <td>
-                <input id="L_Name" type="text" required="required">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="product-type">Product</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <select name="product-type" id="product-type">
-                  <option value="none" selected="selected" disabled="disabled">Select a product</option>
-                  <option value="mouse">Mouse</option>
-                  <option value="keyboard">Keyboard</option>
-                  <option value="headset">Headset</option>
-                  <option value="speaker">Speaker</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="product-id">Product ID*</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="text" name="product-id" id="product-id">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="state-the-problem">State your problem</label>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <textarea name="state-the-problem" id="state-the-problem" cols="30" rows="10"></textarea>
-              </td>
-            </tr>
-          </table>
-        </fieldset>
+        <h2 class="text-center">Fill in the fields below to report your problem</h2>
+        <table class="report">
+          <tr>
+            <td>
+              <label for="F_Name">First name*</label>
+            </td>
+            <td>
+              <label for="L_Name">Last name*</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input id="F_Name" type="text" required="required">
+            </td>
+            <td>
+              <input id="L_Name" type="text" required="required">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="product-type">Product</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select name="product-type" id="product-type">
+                <option value="none" selected="selected" disabled="disabled">Select a product</option>
+                <option value="mouse">Mouse</option>
+                <option value="keyboard">Keyboard</option>
+                <option value="headset">Headset</option>
+                <option value="speaker">Speaker</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="product-id">Product ID*</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" name="product-id" id="product-id">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="state-the-problem">State your problem</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <textarea name="state-the-problem" id="state-the-problem" cols="30" rows="10"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input class="btn btn--primary" type="submit">
+            </td>
+          </tr>
+        </table>
       </form>
     </div>
   </main>

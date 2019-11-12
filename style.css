@@ -1467,6 +1467,23 @@ address{
 
 /* #region report a problem page*/
 
+.report{
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 15px 10px;
+}
+
+.report textarea{
+  width: 100%;
+  margin: 0;
+  resize: vertical;
+  min-height: 175px;
+}
+
+.report input[type="text"], .report select{
+  width: 80%;
+}
 /* #endregion */
 
 /* #region Scroll to top button */

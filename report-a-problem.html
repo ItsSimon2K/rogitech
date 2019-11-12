@@ -171,19 +171,16 @@
           </tr>
           <tr>
             <td>
-              <label for="product-type">Product</label>
+              <label for="email">E-mail*</label>
             </td>
           </tr>
           <tr>
-            <td>
-              <select name="product-type" id="product-type">
-                <option value="none" selected="selected" disabled="disabled">Select a product</option>
-                <option value="mouse">Mouse</option>
-                <option value="keyboard">Keyboard</option>
-                <option value="headset">Headset</option>
-                <option value="speaker">Speaker</option>
-              </select>
+            <td colspan="2">
+              <input id="email" type="email" required="required" placeholder="example@gmail.com">
             </td>
+          </tr>
+          <tr>
+            <td><br></td>
           </tr>
           <tr>
             <td>
@@ -192,17 +189,17 @@
           </tr>
           <tr>
             <td>
-              <input type="text" name="product-id" id="product-id">
+              <input type="text" name="product-id" id="product-id" maxlength="16" required="required">
             </td>
           </tr>
           <tr>
             <td>
-              <label for="state-the-problem">State your problem</label>
+              <label for="state-the-problem">State your problem*</label>
             </td>
           </tr>
           <tr>
             <td colspan="2">
-              <textarea name="problem" id="state-the-problem" cols="30" rows="10"></textarea>
+              <textarea name="problem" id="state-the-problem" required="required"></textarea>
             </td>
           </tr>
           <tr>

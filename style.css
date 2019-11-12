@@ -1481,9 +1481,12 @@ address{
   min-height: 175px;
 }
 
-.report input[type="text"], .report select{
-  width: 80%;
+.report input[type="text"], .report input[type="email"]{
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
+
 /* #endregion */
 
 /* #region Scroll to top button */

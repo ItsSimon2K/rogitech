@@ -1371,7 +1371,7 @@ input[type="submit"] {
 
 /* #region Contact Page */
 
-.contact_banner > h1{
+.contact_banner > h1 {
   font-size: 28px;
   text-align: center;
   height: 150px;
@@ -1380,7 +1380,7 @@ input[type="submit"] {
   overflow: hidden;
 }
 
-.contact_banner img{
+.contact_banner img {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -1391,11 +1391,11 @@ input[type="submit"] {
   object-fit: cover;
 }
 
-.contact_content{
+.contact_content {
   text-align: center;
 }
 
-.contact_container{
+.contact_container {
   position: relative;
   width: 100%;
   height: 550px;
@@ -1408,7 +1408,7 @@ input[type="submit"] {
   box-shadow: var(--shadow-6);
 }
 
-.contact_icon{
+.contact_icon {
   background-color: var(--color-gray-700);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -1417,49 +1417,49 @@ input[type="submit"] {
   box-shadow: var(--shadow-4);
 }
 
-.contact_info{
+.contact_info {
   text-align: center;
   margin: 0 2%;
   display: inline-block;
 }
 
-.contact_info_item{
+.contact_info_item {
   text-align: left;
   list-style-type: none;
   padding-left: 0;
 }
 
-.contact_info_item ul{
+.contact_info_item ul {
   list-style-type: none;
   padding-left: 0;
   display:inline;
 }
 
-.contact_info_item > li{
+.contact_info_item > li {
   padding: 10% 0;
   font-weight: bold;
   font-size: 18px;
 }
 
-.contact_info_item ul li{  
+.contact_info_item ul li {  
   margin: 10% 0;
   font-weight: normal;
   font-size: 16px;
 }
 
-.contact_info_item li a, .contact_info_item ul li a{
+.contact_info_item li a, .contact_info_item ul li a {
   transition: color .2s var(--ease);
 }
 
-.contact_info_item li a:hover, .contact_info_item ul li a:hover{
+.contact_info_item li a:hover, .contact_info_item ul li a:hover {
   color: var(--color-primary-500);
 }
 
-.contact_hidden{
+.contact_hidden {
   clear: both;
 }
 
-address{
+address {
   font-style: normal;
 }
 
@@ -1467,25 +1467,29 @@ address{
 
 /* #region report a problem page*/
 
-.report{
+.report {
   margin: 0 auto;
   width: 100%;
   border-collapse: separate;
   border-spacing: 15px 10px;
 }
 
-.report textarea{
+.report textarea {
   width: 100%;
   margin: 0;
   resize: vertical;
   min-height: 175px;
 }
 
-.report input[type="text"], .report input[type="email"]{
+.report input[type="text"], .report input[type="email"] {
   width: 100%;
   height: 100%;
   margin: 0;
 }
+
+/* #endregion */
+
+/* #region News Page */
 
 /* #endregion */
 

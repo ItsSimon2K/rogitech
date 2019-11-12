@@ -321,25 +321,6 @@ input[type="submit"] {
 
 /* #endregion */
 
-/* #region Iconify */
-
-.iconify__icon {
-  opacity: 0;
-  animation: fade-in-out infinite linear alternate;
-}
-
-@keyframes fade-in-out {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: .2;
-  }
-}
-
-/* #endregion */
-
 /* #region Card */
 
 .card {

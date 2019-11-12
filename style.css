@@ -93,6 +93,7 @@ a {
 }
 
 button {
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -581,6 +582,7 @@ input[type="submit"] {
 /* #region Button */
 
 .btn {
+  display: inline-block;
   font-weight: 600;
   color: var(--color-gray-900);
   background-color: var(--color-primary-100);

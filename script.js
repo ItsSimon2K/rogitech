@@ -123,8 +123,11 @@
           if (entry.isIntersecting) {
             entry.target.style.opacity = '1'
             entry.target.style.transform = 'translate3d(0, 0, 0)'
+            faderObserver.unobserve(entry.target)
           }
         })
+      }, {
+        threshold: 0.8
       })
 
       document.querySelectorAll('.fader').forEach((fader) => {
@@ -158,7 +161,7 @@
           }
         }
   
-        fader.style.transition = `all ${duration} ${delay} ${easing}`
+        fader.style.transition = `opacity ${duration} ${delay} ${easing}, transform ${duration} ${delay} ${easing}`
   
         faderObserver.observe(fader)
       })

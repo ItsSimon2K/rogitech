@@ -139,7 +139,7 @@ input[type="submit"] {
   right: 0;
   width: auto;
   padding: .5rem;
-  border-radius: var(--radius-1);
+  border-radius: var(--radius-2);
   background-color: var(--color-gray-700);
   box-shadow: var(--shadow-2);
   opacity: 0;
@@ -512,8 +512,9 @@ input[type="submit"] {
   flex-wrap: wrap;
   align-items: center;
   margin: .25rem;
-  border-radius: var(--radius-1);
+  border-radius: var(--radius-2);
   transition: all .2s var(--ease);
+  overflow: hidden;
 }
 
 .list__item > * {
@@ -567,13 +568,13 @@ input[type="submit"] {
 
 .list__item__content__title {
   font-weight: bold;
-  margin: .5rem;
+  margin: .5rem 0;
 }
 
 .list__item__content__text {
   font-weight: normal;
   opacity: .8;
-  margin: .25rem;
+  margin: .25rem 0;
 }
 
 /* #endregion */
@@ -851,7 +852,8 @@ input[type="submit"] {
   box-shadow: var(--shadow-6);
   list-style: none;
   opacity: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   visibility: hidden;
   transition: all .2s var(--ease), visibility .2s .2s;
 }

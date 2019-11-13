@@ -244,10 +244,9 @@ input[type="submit"] {
   flex-direction: column;
   flex: 0 1 0;
   justify-content: flex-end;
-  padding: 2rem 0;
+  padding: 2rem;
   margin: 0 auto;
   height: 100%;
-  max-width: calc(100% - 4rem - 4em);
   opacity: 0;
 }
 

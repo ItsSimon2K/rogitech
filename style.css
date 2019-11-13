@@ -1708,6 +1708,14 @@ address {
 
 /* #endregion */
 
+/* #region Developer page */
+
+.developer_card {
+	border: 2px var(--color-primary-400);
+}
+
+/* #endregion */
+
 /* #region About page */
 
 .about-bio {

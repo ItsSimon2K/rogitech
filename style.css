@@ -91,6 +91,39 @@ body {
   min-height: 100vh;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin: .8rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
 a {
   color: inherit;
   font-weight: 600;
@@ -597,6 +630,7 @@ fieldset {
   font-weight: normal;
   opacity: .8;
   margin: .25rem 0;
+  font-size: 1rem;
 }
 
 /* #endregion */
@@ -1596,7 +1630,7 @@ address {
 
 /* #endregion */
 
-/* Feedback Form */
+/* #region Feedback Form */
 
 .feedback_table {
   width: 100%;
@@ -1618,9 +1652,9 @@ address {
   height: 46px;
 }
 
-/* Feedback Form */
+/* #endregion */
 
-/* Main product page */
+/* #region Main product page */
 
 .big_product_buttons {
 	text-align: center;
@@ -1666,6 +1700,8 @@ address {
 	opacity: 0.5;
 	background-size: 500px auto;
 }
+
+/* #endregion */
 
 /* #region About page */
 

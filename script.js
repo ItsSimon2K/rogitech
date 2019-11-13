@@ -219,7 +219,7 @@
      * Data:
      * - `data-fake-load-duration`: Loading duration in ms. (Default: 3000)
      * - `data-fake-load-targets`: Comma-separated targets using query selectors. (Default: self)
-     * - `data-fake-load-classes`: Comma-separated classes for respective targets. (Default: 'loading')
+     * - `data-fake-load-classes`: Comma-separated classes to be added on respective targets when loading. (Default: 'loading')
      */
     document.querySelectorAll('.fake-load').forEach((el) => {
       const {
@@ -233,19 +233,28 @@
 
       const minListLength = Math.min(targetList.length, loadClassList.length)
 
-      el.addEventListener('submit', (evt) => {
-        evt.preventDefault()
+      const results = el.querySelectorAll('.fake-load__result')
 
+      // Hide results
+      results.forEach(result => result.style.display = 'none')
+
+      el.addEventListener('submit', () => {
         // Add loading classes
         for (let i = 0; i < minListLength; i++) {
           targetList[i].forEach(v => v.classList.add(loadClassList[i]))
         }
 
+        // Hide results
+        results.forEach(result => result.style.display = 'none')
+        
         setTimeout(() => {
           // Remove loading classes
           for (let i = 0; i < minListLength; i++) {
             targetList[i].forEach(v => v.classList.remove(loadClassList[i]))
           }
+
+          // Show results
+          results.forEach(result => result.style.display = '')
         }, +duration)
       })
     })

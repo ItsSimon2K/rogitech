@@ -1129,7 +1129,8 @@ input[type="submit"] {
 }
 
 .filter-darken {
-  filter: brightness(50%);
+  filter: brightness(80%);
+  text-shadow: 0 0 3px black;
 }
 
 /* #endregion */

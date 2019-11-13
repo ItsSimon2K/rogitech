@@ -23,8 +23,130 @@
 </head>
 
 <body>
+  <header class="app-header">
+    <div class="container">
+      <a class="app-header__logo" href="index.html">
+        <img src="images/logo_icon.svg" alt="Logo icon" height="28">
+        <img src="images/logo_name.svg" alt="Logo name" height="22">
+      </a>
+      <nav class="app-header__nav">
+        <button class="app-header__nav__burger btn btn--icon">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <ul class="app-header__nav__list">
+          <li class="app-header__nav__list__item dropdown">
+            <div class="app-header__nav__list__item__link dropdown__activator" role="button" tabindex="0">
+              Products <i class="fas fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <ul class="app-header__nav__list__item__menu dropdown__menu list">
+              <li>
+                <a class="list__item list__item--hoverable" href="mouse.html">
+                  <div class="list__item__avatar">
+                    <i class="fas fa-mouse-pointer fa-2x" aria-hidden="true"></i>
+                  </div>
+                  <div class="list__item__content">
+                    <h3 class="list__item__content__title">Mouse</h3>
+                    <p class="list__item__content__text">The Flex™ Edition</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list__item list__item--hoverable" href="keyboard.html">
+                  <div class="list__item__avatar">
+                    <i class="fas fa-keyboard fa-2x" aria-hidden="true"></i>
+                  </div>
+                  <div class="list__item__content">
+                    <h3 class="list__item__content__title">Keyboard</h3>
+                    <p class="list__item__content__text">The Depth™ Edition</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list__item list__item--hoverable" href="headset.html">
+                  <div class="list__item__avatar">
+                    <i class="fas fa-headphones fa-2x" aria-hidden="true"></i>
+                  </div>
+                  <div class="list__item__content">
+                    <h3 class="list__item__content__title">Headset</h3>
+                    <p class="list__item__content__text">The Omno™ Edition</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list__item list__item--hoverable" href="speaker.html">
+                  <div class="list__item__avatar">
+                    <i class="fas fa-volume-up fa-2x" aria-hidden="true"></i>
+                  </div>
+                  <div class="list__item__content">
+                    <h3 class="list__item__content__title">Speaker</h3>
+                    <p class="list__item__content__text">The Zest™ Edition</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="list__item list__item--hoverable" href="products.html">
+                  <div class="list__item__content list__item__content--center">
+                    <p class="list__item__content__text">View all</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="app-header__nav__list__item">
+            <a class="app-header__nav__list__item__link" href="news.html">
+              News
+            </a>
+          </li>
+          <li class="app-header__nav__list__item dropdown">
+            <div class="app-header__nav__list__item__link dropdown__activator" role="button" tabindex="0">
+              Support <i class="fas fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="app-header__nav__list__item__menu dropdown__menu list">
+              <a class="list__item list__item--hoverable" href="warranty-info.html">
+                <div class="list__item__avatar">
+                  <i class="fas fa-info fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="list__item__content">
+                  <h3 class="list__item__content__title">Warranty info</h3>
+                  <p class="list__item__content__text">Find product warranty</p>
+                </div>
+              </a>
+              <a class="list__item list__item--hoverable" href="contact.html">
+                <div class="list__item__avatar">
+                  <i class="fas fa-headset fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="list__item__content">
+                  <h3 class="list__item__content__title">Contact us</h3>
+                  <p class="list__item__content__text">Call us for enquiries</p>
+                </div>
+              </a>
+              <a class="list__item list__item--hoverable" href="report-a-problem.html">
+                <div class="list__item__avatar">
+                  <i class="fas fa-exclamation-triangle fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="list__item__content">
+                  <h3 class="list__item__content__title">Report a problem</h3>
+                  <p class="list__item__content__text">File an issue</p>
+                </div>
+              </a>
+              <a class="list__item list__item--hoverable" href="support.html">
+                <div class="list__item__content list__item__content--center">
+                  <p class="list__item__content__text">View all</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="app-header__nav__list__item">
+            <a class="app-header__nav__list__item__link" href="about.html">
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main>
-    <section class="hero my-3" style="height: 120px;">
+    <section class="hero" style="height: 120px;">
       <div class="hero__bg">
         <!-- https://unsplash.com/photos/g1Kr4Ozfoac -->
         <img class="hero__bg__img filter-darken parallax" src="images/about_hero.jpg" alt="About hero background">
@@ -33,7 +155,7 @@
         <h1>About us</h1>
       </div>
     </section>
-    <section class="container">
+    <section class="container my-3">
       <h2>Rogitech Technologies</h2>
       <div class="about-bio">
         <div class="about-bio__left">
@@ -156,6 +278,75 @@
       </div>
     </section>
   </main>
+  <footer class="app-footer">
+    <div class="container">
+      <div class="app-footer__nav">
+        <div class="app-footer__nav__item">
+          <h5>
+            <a href="index.html">
+              <img src="images/logo_icon.svg" alt="Logo icon" height="28">
+              <img src="images/logo_name.svg" alt="Logo name" height="22">
+            </a>
+          </h5>
+          <div class="newsletter">
+            <h6 class="newsletter__header">Get the latest news and deals!</h6>
+            <form class="newsletter__form" name="newsletter" action="mailto:news@rogitech.com">
+              <input class="newsletter__form__email" type="email" name="email" size="20" placeholder="john@example.com"
+                required="required">
+              <input class="newsletter__form__button" type="submit" value="Subscribe">
+            </form>
+          </div>
+          <div class="my-3">
+            <a class="btn btn--primary-outline" href="feedback.html">Give website feedback</a>
+          </div>
+        </div>
+        <div class="app-footer__nav__item">
+          <h5><a class="app-footer__nav__item__header" href="products.html">Products</a></h5>
+          <ul class="app-footer__nav__item__list">
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-mouse-pointer" aria-hidden="true"></i>
+              <a href="mouse.html">Mouse</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-keyboard" aria-hidden="true"></i>
+              <a href="keyboard.html">Keyboard</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-headphones" aria-hidden="true"></i>
+              <a href="headset.html">Headset</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-volume-up" aria-hidden="true"></i>
+              <a href="speaker.html">Speaker</a>
+            </li>
+          </ul>
+        </div>
+        <div class="app-footer__nav__item">
+          <h5><a class="app-footer__nav__item__header" href="support.html">Support</a></h5>
+          <ul class="app-footer__nav__item__list">
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-info" aria-hidden="true"></i>
+              <a href="warranty-info.html">Warranty info</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-headset" aria-hidden="true"></i>
+              <a href="contact.html">Contact us</a>
+            </li>
+            <li class="app-footer__nav__item__list__item">
+              <i class="app-footer__nav__item__list__item__icon fas fa-exclamation" aria-hidden="true"></i>
+              <a href="report-a-problem.html">Report a problem</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="app-footer__credits">
+        <span>
+          &copy; <a href="eventhorizon.html">Event Horizon</a> | Last updated: 2019
+        </span>
+      </div>
+    </div>
+  </footer>
 
   <script defer src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
   <script defer src="script.js"></script>

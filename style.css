@@ -1688,7 +1688,7 @@ address {
 }
 
 .about-quote__icon {
-  color: var(--color-primary-200);
+  opacity: .5;
 }
 
 .about-quote__quote {

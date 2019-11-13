@@ -1607,8 +1607,7 @@ address {
 	width: 380px;
 	padding: 75px;
 	border-radius: 15px;
-	background-color: var(--color-primary-600);
-	color: white;
+	color: black;
 	border: none;
 	cursor: pointer;
 	font-size: 16px;
@@ -1617,8 +1616,32 @@ address {
 }
 
 .main_products_button:hover {
-	background-color: var(--color-primary-400);
-	color: black;
+	color: var(--color-primary-400);
+	opacity: 1;
+}
+
+.mouse_background {
+	background-image: url("images/mouse1.jpg");
+	opacity: 0.5;
+	background-size: 500px auto;
+}
+
+.keyboard_background {
+	background-image: url("images/keyboard1.jpg");
+	opacity: 0.5;
+	background-size: 500px auto;
+}
+
+.headphones_background {
+	background-image: url("images/headset1.jpg");
+	opacity: 0.5;
+	background-size: 500px auto;
+}
+
+.speakers_background {
+	background-image: url("images/speaker3.jpg");
+	opacity: 0.5;
+	background-size: 500px auto;
 }
 
 /* #region About page */

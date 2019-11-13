@@ -1708,6 +1708,38 @@ address {
 
 /* #endregion */
 
+/* #region Support page */
+
+.align_to_center {
+	text-align: center;
+}
+
+.main_support_button {
+	border: none;
+	width: 90%;
+	border-radius: 20px;
+	outline: none;
+	transition-duration: 0.5s;
+	color: white;
+	background-color: var(--color-primary-700);
+}
+
+.main_support_button:hover {
+	color: black;
+	background-color: var(--color-primary-300);
+}
+
+.float_icon_left {
+	float: left;
+	padding: 30px 30px;
+}
+
+.adjust_info_icon {
+	padding-left: 65px;
+}
+
+/* #endregion */
+
 /* #region Developer page */
 
 .developer_card {

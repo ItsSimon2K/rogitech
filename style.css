@@ -1603,32 +1603,22 @@ address {
 	text-align: center;
 }
 
-.main_mouse_button {
-	width: 26%;
-	padding: 8%;
+.main_products_button {
+	width: 380px;
+	padding: 75px;
 	border-radius: 15px;
-	background-color: var(--color-primary-500);
+	background-color: var(--color-primary-600);
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	transition-duration: 0.5s;
+	outline: none;
 }
 
-.main_keyboard_button {
-	width: 26%;
-	padding: 8%;
-	border-radius: 15px;
-	background-color: var(--color-primary-500);
-}
-
-.main_headphones_button {
-	width: 26%;
-	padding: 8%;
-	border-radius: 15px;
-	background-color: var(--color-primary-500);
-}
-
-.main_speakers_button {
-	width: 26%;
-	padding: 8%;
-	border-radius: 15px;
-	background-color: var(--color-primary-500);
+.main_products_button:hover {
+	background-color: var(--color-primary-400);
+	color: black;
 }
 
 /* #region About page */

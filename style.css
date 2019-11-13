@@ -1540,6 +1540,10 @@ address {
   margin: 0;
 }
 
+.report input[type="submit"] {
+  float: right;
+}
+
 /* #endregion */
 
 /* #region News Page */

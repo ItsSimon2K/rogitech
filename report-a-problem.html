@@ -151,7 +151,10 @@
     <div class="report_content">
       <h1 class="text-center">Report a problem</h1>
       <div class="app-card card">
-        <form name="report a problem" method="post" action="mailto:">
+        <form class="fake-load" name="report a problem" method="post" action="mailto:support@rogitech.com"
+          data-fake-load-targets=".app-card.card"
+          data-fake-load-classes="card--loading"
+        >
           <h2 class="text-center">Fill in the fields below to report your problem</h2>
           <table class="report">
             <tr>
@@ -204,6 +207,9 @@
               </td>
             </tr>
             <tr>
+              <td>
+                
+              </td>
               <td>
                 <input class="btn btn--primary" type="submit">
               </td>
@@ -286,6 +292,7 @@
     </div>
   </footer>
   <!-- footer end -->
+  <script defer src="script.js"></script>
 </body>
 
 </html>

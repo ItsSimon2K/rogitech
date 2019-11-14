@@ -1675,6 +1675,7 @@ address {
 	font-size: 16px;
 	transition-duration: 0.5s;
 	outline: none;
+	margin: auto 6px;
 }
 
 .main_products_button:hover {
@@ -1729,13 +1730,29 @@ address {
 	background-color: var(--color-primary-300);
 }
 
+.main_support_heading {
+	text-align: right;
+	margin: 16px 30px;
+	font-size: 30pt;
+}
+
+.support_heading_description {
+	text-align: right;
+	margin: 0 30px;
+	font-size: 16pt;
+}
+
 .float_icon_left {
 	float: left;
 	padding: 30px 30px;
 }
 
 .adjust_info_icon {
-	padding-left: 65px;
+	padding-left: 70px;
+}
+
+.adjust_headset_icon {
+	padding-left: 36px;
 }
 
 /* #endregion */

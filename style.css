@@ -125,6 +125,7 @@ a {
 }
 
 button {
+  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: inline-block;
   cursor: pointer;
 }
@@ -172,46 +173,6 @@ fieldset {
 .container {
   margin: 0 auto;
   width: 95%;
-}
-
-/* #endregion */
-
-/* #region Dropdown */
-
-.dropdown {
-  position: relative;
-  perspective: 1000px;
-}
-
-.dropdown__activator {
-  cursor: pointer;
-}
-
-.dropdown__menu {
-  position: absolute;
-  z-index: 100;
-  top: 100%;
-  right: 0;
-  width: auto;
-  padding: .5rem;
-  border-radius: var(--radius-2);
-  background-color: var(--color-gray-700);
-  box-shadow: var(--shadow-2);
-  opacity: 0;
-  transform: rotateX(-10deg);
-  transform-origin: top center;
-  visibility: hidden;
-  transition: all .2s var(--ease), visibility .2s .2s;
-}
-
-.dropdown:hover .dropdown__menu,
-.dropdown:focus .dropdown__menu,
-.dropdown:focus-within .dropdown__menu,
-.dropdown__activator:active ~ .dropdown__menu {
-  opacity: 1;
-  transform: rotateX(0);
-  visibility: visible;
-  transition: all .2s var(--ease);
 }
 
 /* #endregion */
@@ -918,7 +879,7 @@ fieldset {
   padding: 1rem;
   margin: 0;
   background-color: var(--color-gray-700);
-  border-radius: var(--radius-1);
+  border-radius: var(--radius-2);
   box-shadow: var(--shadow-6);
   list-style: none;
   opacity: 0;
@@ -942,14 +903,31 @@ fieldset {
   transition: all .2s var(--ease);
 }
 
-.app-header__nav__list__item:hover,
-.app-header__nav__list__item:focus,
-.app-header__nav__list__item:focus-within {
+.app-header__nav__list__item__link {
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+  outline: none;
+  border: none;
+  color: var(--color-primary-500);
+  background-color: transparent;
+  text-shadow: none;
+  text-transform: none;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
 
+.app-header__nav__list__item__link:hover,
+.app-header__nav__list__item__link:focus,
+.app-header__nav__list__item__link:focus-within {
   color: var(--color-primary-500);
 }
 
-.app-header__nav__list__item::before {
+.app-header__nav__list__item__link::before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -958,45 +936,38 @@ fieldset {
   width: 100%;
   height: 100%;
   opacity: 0;
+  border-radius: var(--radius-2);
   background-color: var(--color-primary-500);
   transition: opacity .2s var(--ease);
 }
 
-.app-header__nav__list__item:hover::before,
-.app-header__nav__list__item:focus::before,
-.app-header__nav__list__item:focus-within::before {
+.app-header__nav__list__item__link:hover::before,
+.app-header__nav__list__item__link:focus::before,
+.app-header__nav__list__item__link:focus-within::before {
   opacity: .1;
-}
-
-.app-header__nav__list__item__link {
-  display: block;
-  padding: 1rem;
-  font-weight: 600;
 }
 
 .app-header__nav__list__item__menu {
   position: relative;
   color: var(--color-primary-100);
   width: 100%;
-  max-height: 0;
+  height: 0;
+  padding: 0 .5rem;
   opacity: 0;
-  transform: rotateX(0);
-  box-shadow: none;
   overflow: hidden;
-  transition: all .2s var(--ease), max-height .6s .2s var(--ease);
+  transition: opacity .2s .1s var(--ease);
 }
 
-/* Overrides original dropdown control for mobile responsive */
-.dropdown:focus .app-header__nav__list__item__menu,
-.dropdown:focus-within .app-header__nav__list__item__menu,
-.dropdown__activator:active ~ .app-header__nav__list__item__menu {
+.app-header__nav__list__item:focus .app-header__nav__list__item__menu,
+.app-header__nav__list__item:focus-within .app-header__nav__list__item__menu {
+  height: auto;
   opacity: 1;
-  transform: rotateX(0);
-  max-height: 810px;
-  visibility: visible;
-  transition: all .2s .2s var(--ease), max-height .6s var(--ease);
+  padding: .5rem
 }
 
+/* #endregion */
+
+/* #region Nav dropdown */
 /* #endregion */
 
 /* #region App footer */
@@ -1898,6 +1869,46 @@ address {
     width: 960px;
   }
 
+  /* #region Dropdown */
+
+  .dropdown {
+    position: relative;
+    perspective: 1000px;
+  }
+
+  .dropdown__activator {
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  .dropdown__menu {
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    right: 0;
+    width: auto;
+    height: auto;
+    padding: .5rem;
+    border-radius: var(--radius-2);
+    background-color: var(--color-gray-700);
+    box-shadow: var(--shadow-2);
+    opacity: 0;
+    transform: rotateX(-10deg);
+    transform-origin: top center;
+    visibility: hidden;
+    transition: transform .2s var(--ease), opacity .2s var(--ease), visibility .2s .2s;
+  }
+
+  .dropdown:hover .dropdown__menu,
+  .dropdown:focus .dropdown__menu,
+  .dropdown:focus-within .dropdown__menu {
+    opacity: 1;
+    transform: rotateX(0);
+    visibility: visible;
+    transition: transform .2s var(--ease), opacity .2s var(--ease);
+  }
+
+  /* #endregion */
 
   .app-header__nav__burger {
     display: none;

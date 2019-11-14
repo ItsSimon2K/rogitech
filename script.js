@@ -15,6 +15,20 @@
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     /**
+     * Dropdown helper
+     * 
+     * Description:
+     * - Auto close active dropdown
+     */
+    document.querySelectorAll('.dropdown__activator').forEach((activator) => {
+      activator.addEventListener('mouseenter', () => {
+        if (document.activeElement !== activator) {
+          document.activeElement.blur()
+        }
+      })
+    })
+
+    /**
      * Carousel
      * 
      * Usage:

@@ -1759,8 +1759,8 @@ address {
 
 /* #region Developer page */
 
-.developer_card {
-	border: 2px var(--color-primary-400);
+.group_member_image {
+	float: left;
 }
 
 /* #endregion */

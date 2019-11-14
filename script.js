@@ -22,7 +22,7 @@
      */
     document.querySelectorAll('.dropdown__activator').forEach((activator) => {
       activator.addEventListener('mouseenter', () => {
-        if (document.activeElement !== activator) {
+        if (document.activeElement.classList.contains('dropdown__activator') && document.activeElement !== activator) {
           document.activeElement.blur()
         }
       })

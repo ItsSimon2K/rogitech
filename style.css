@@ -455,10 +455,12 @@ hr {
 
 .mini-card--hover .mini-card__content {
   opacity: .8;
-  transition: opacity .2s var(--ease);
+  transition: opacity .2s var(--ease), color .2s var(--ease);
 }
 
-.mini-card--hover:hover .mini-card__content {
+.mini-card--hover:hover .mini-card__content,
+.mini-card--hover:focus .mini-card__content {
+  color: var(--color-primary-400);
   opacity: 1;
 }
 
@@ -481,7 +483,7 @@ hr {
 }
 
 .mini-card--darken:hover .mini-card__content::before {
-  opacity: .1;
+  opacity: .2;
 }
 
 .mini-card__content__avatar {
@@ -1389,7 +1391,7 @@ hr {
 }
 
 .img-scroller__item:hover::before {
-  opacity: .1;
+  opacity: .2;
 }
 
 .img-scroller__item::after {
@@ -1688,45 +1690,12 @@ address {
 }
 
 .main_products_button {
-	width: 400px;
-	padding: 75px;
-	border-radius: 15px;
+  width: 400px;
+  height: 300px;
+	border-radius: var(--radius-3);
 	color: var(--color-gray-200);
-	border: none;
-	cursor: pointer;
-	font-size: 16px;
-	transition-duration: 0.5s;
-	outline: none;
-	margin: auto 6px;
-}
-
-.main_products_button:hover {
-	color: var(--color-primary-400);
-	opacity: 1;
-}
-
-.mouse_background {
-	background-image: url("images/mouse1.jpg");
-	opacity: 0.5;
-	background-size: 500px auto;
-}
-
-.keyboard_background {
-	background-image: url("images/keyboard1.jpg");
-	opacity: 0.5;
-	background-size: 500px auto;
-}
-
-.headphones_background {
-	background-image: url("images/headset1.jpg");
-	opacity: 0.5;
-	background-size: 500px auto;
-}
-
-.speakers_background {
-	background-image: url("images/speaker3.jpg");
-	opacity: 0.5;
-	background-size: 500px auto;
+  margin: 6px;
+  box-shadow: var(--shadow-3);
 }
 
 /* #endregion */
@@ -1738,43 +1707,35 @@ address {
 }
 
 .main_support_button {
-	border: none;
-	width: 90%;
-	border-radius: 20px;
-	outline: none;
-	transition-duration: 0.5s;
-	color: white;
-	background-color: var(--color-primary-700);
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  border: none;
+  padding: 1.5rem;
+  margin: 6px;
+	border-radius: var(--radius-3);
+	background-color: var(--color-gray-700);
 }
 
-.main_support_button:hover {
-	color: black;
-	background-color: var(--color-primary-300);
+.icon_left {
+  transition-duration: .2s;
+}
+
+.main_support_button:hover .icon_left {
+  color: var(--color-primary-400);
 }
 
 .main_support_heading {
 	text-align: right;
-	margin: 16px 30px;
-	font-size: 30pt;
 }
 
 .support_heading_description {
-	text-align: right;
-	margin: 0 30px;
-	font-size: 16pt;
+  text-align: right;
+  transition-duration: .2s;
 }
 
-.float_icon_left {
-	float: left;
-	padding: 30px 30px;
-}
-
-.adjust_info_icon {
-	padding-left: 70px;
-}
-
-.adjust_headset_icon {
-	padding-left: 36px;
+.support_heading_description:hover {
+  color: var(--color-primary-400);
 }
 
 /* #endregion */
@@ -1925,6 +1886,10 @@ address {
   .dropdown {
     position: relative;
     perspective: 1000px;
+  }
+
+  .dropdown:hover {
+    z-index: 10;
   }
 
   .dropdown__activator {

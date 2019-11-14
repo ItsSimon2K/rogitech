@@ -198,12 +198,20 @@
     // Scroll to Top Button
     ;(() => {
       const scrollTopBtns = document.querySelectorAll('.scroll-top-btn')
+
+      let prevScrollY = window.scrollY
+
       const checkScroll = () => {
-        if (window.scrollY === 0) {
-          scrollTopBtns.forEach(btn => btn.classList.remove('show'))
-        } else {
+        const bottomPageY = document.body.scrollHeight - window.innerHeight - 50
+
+        // If scrolling up or near bottom page
+        if (window.scrollY > 0 && (window.scrollY - prevScrollY < 0 || window.scrollY >= bottomPageY)) {
           scrollTopBtns.forEach(btn => btn.classList.add('show'))
+        } else {
+          scrollTopBtns.forEach(btn => btn.classList.remove('show'))
         }
+
+        prevScrollY = window.scrollY
       }
 
       checkScroll()

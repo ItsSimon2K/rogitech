@@ -148,6 +148,10 @@ fieldset {
   border-color: var(--color-primary-300);
 }
 
+hr {
+  opacity: .2;
+}
+
 /* #endregion */
 
 /* #region Scrollbar */
@@ -622,6 +626,7 @@ fieldset {
   border-radius: var(--radius-1);
   outline: none;
   overflow: hidden;
+  text-shadow: none;
 }
 
 .btn--primary {
@@ -913,7 +918,7 @@ fieldset {
   text-align: left;
   outline: none;
   border: none;
-  color: var(--color-primary-500);
+  color: var(--color-primary-100);
   background-color: transparent;
   text-shadow: none;
   text-transform: none;

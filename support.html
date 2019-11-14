@@ -14,18 +14,18 @@
   <meta name="author" content="Jason Liu Shao Yun">
   <meta name="description" content="Event Horizon's Products">
   <meta name="keywords" content="">
-  
+
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
-  
+
 </head>
 
 <body>
-<header class="app-header">
-   <div class="container">
+  <header class="app-header">
+    <div class="container">
       <a class="app-header__logo" href="index.html">
         <img src="images/logo_icon.svg" alt="Logo icon" height="28">
         <img src="images/logo_name.svg" alt="Logo name" height="22">
@@ -144,54 +144,64 @@
           </li>
         </ul>
       </nav>
-   </div>
-</header>
+    </div>
+  </header>
 
-<article>
+  <article>
+    <div class="container my-4">
+      <h1 class="text-center">Get support</h1>
+      <section class="align_to_center">
+        <div class="main_support_button">
+          <div class="row row--center h-full">
+            <div class="col-2">
+              <i class="fas fa-info fa-8x icon_left" aria-hidden="true"></i>
+            </div>
+            <div class="col-4">
+              <h2 class="main_support_heading">Warranty Information</h2>
+              <p class="support_heading_description">
+                <a href="warranty-info.html">Click here to find product warranty</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="main_support_button">
+          <div class="row row--center h-full">
+            <div class="col-2">
+              <i class="fas fa-headset fa-8x icon_left" aria-hidden="true"></i>
+            </div>
+            <div class="col-4">
+              <h2 class="main_support_heading">Contact Us</h2>
+              <p class="support_heading_description">
+                <a href="contact.html#address">Find the address to our headquarters</a>
+              </p>
+              <p class="support_heading_description">
+                <a href="contact.html#contact">Contact us by emailing or calling</a>
+              </p>
+              <p class="support_heading_description">
+                <a href="contact.html#social">Stay in touch via social media</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="main_support_button">
+          <div class="row row--center h-full">
+            <div class="col-2">
+              <i class="fas fa-exclamation-triangle fa-8x icon_left" aria-hidden="true"></i>
+            </div>
+            <div class="col-4">
+              <h2 class="main_support_heading">Report a Problem</h2>
+              <p class="support_heading_description">
+                <a href="report-a-problem.html">File an issue or complaint</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
 
-<section class="align_to_center">
-<p>
-<a href="warranty-info.html">
-	<button class="main_support_button">
-		<div class="float_icon_left adjust_info_icon">
-			<i class="fas fa-info fa-8x support_icon_margins"></i>
-		</div>
-		<h1 class="main_support_heading">Warranty Information</h1>
-		<h3 class="support_heading_description">Click here to find product warranty</h3>
-	</button>
-</a>
-</p>
-
-<p>
-<a href="contact.html">
-	<button class="main_support_button">
-		<div class="float_icon_left adjust_headset_icon">
-			<i class="fas fa-headset fa-8x support_icon_margins"></i>
-		</div>
-		<h1 class="main_support_heading">Contact Details</h1>
-		<h3 class="support_heading_description">Find the address to our headquarters</h3>
-		<h3 class="support_heading_description">Contact us by emailing or calling</h3>
-		<h3 class="support_heading_description">Stay in touch via social media</h3>
-	</button>
-</a>
-</p>
-
-<p>
-<a href="report-a-problem.html">
-	<button class="main_support_button">
-		<div class="float_icon_left">
-			<i class="fas fa-exclamation-triangle fa-8x support_icon_margins"></i>
-		</div>
-		<h1 class="main_support_heading">Report a Problem</h1>
-		<h3 class="support_heading_description">File an issue or complaint</h3>
-	</button>
-</p>
-</section>
-
-</article>
-
-<footer class="app-footer">
-   <div class="container">
+  <footer class="app-footer">
+    <div class="container">
       <div class="app-footer__nav">
         <div class="app-footer__nav__item">
           <h5>
@@ -262,6 +272,10 @@
       <button class="scroll-top-btn" title="Scroll to top">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>
       </button>
-   </div>
-</footer>
+    </div>
+  </footer>
+
+  <script defer src="script.js"></script>
 </body>
+
+</html>

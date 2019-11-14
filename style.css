@@ -1914,6 +1914,10 @@ address {
     perspective: 1000px;
   }
 
+  .dropdown:hover {
+    z-index: 10;
+  }
+
   .dropdown__activator {
     cursor: pointer;
     border-radius: 0;

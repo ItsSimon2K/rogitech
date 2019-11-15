@@ -2008,6 +2008,7 @@ address {
     transform: rotateX(-10deg);
     transform-origin: top center;
     visibility: hidden;
+    pointer-events: none;
     transition: transform .2s var(--ease), opacity .2s var(--ease), visibility .2s .2s;
   }
 
@@ -2017,6 +2018,7 @@ address {
     opacity: 1;
     transform: rotateX(0);
     visibility: visible;
+    pointer-events: visible;
     transition: transform .2s var(--ease), opacity .2s var(--ease);
   }
 

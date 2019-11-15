@@ -1853,10 +1853,15 @@ address {
 /* #region Breakpoints */
 
 @media (min-width: 576px) {
+  /* #region Container */
+
   .container {
     width: 540px;
   }
 
+  /* #endregion */
+
+  /* #region App footer */
 
   .app-footer__nav__item {
     flex: 1 0 50%;
@@ -1868,14 +1873,21 @@ address {
     flex: 1 0 100%;
     width: 100%;
   }
+
+  /* #endregion */
 }
 
 @media (min-width: 768px) {
+  /* #region Container */
+
   .container {
     width: 720px;
   }
 
+  /* #endregion */
 
+  /* #region Home page */
+  
   .home-intro__card {
     width: 150px;
     height: 150px;
@@ -1909,11 +1921,18 @@ address {
     text-align: right;
   }
 
+  /* #endregion */
 
+  /* #region About page */
+  
   .about-quote {
     width: 60%;
     margin-left: auto;
   }
+
+  /* #endregion */
+
+  /* #region News page */
 
   .news_container {
     margin-top: 30px;
@@ -1945,12 +1964,18 @@ address {
     position: absolute;
     bottom: 15%;
   }
+
+  /* #endregion */
 }
 
 @media (min-width: 992px) {
+  /* #region Container */
+
   .container {
     width: 960px;
   }
+
+  /* #endregion */
 
   /* #region Dropdown */
 
@@ -1997,6 +2022,8 @@ address {
 
   /* #endregion */
 
+  /* #region App header */
+
   .app-header__nav__burger {
     display: none;
   }
@@ -2026,11 +2053,24 @@ address {
     box-shadow: var(--shadow-2);
   }
 
+  /* #endregion */
+
+  /* #region App footer */
 
   .app-footer__nav__item {
     flex: 1 0 25%;
     width: 25%;
   }
+  
+  /* Logo */
+  .app-footer__nav__item:first-child {
+    flex: 1 0 50%;
+    width: 50%;
+  }
+
+  /* #endregion */
+
+  /* #region Contact page */
 
   .contact_container{
     width: 26%;
@@ -2041,12 +2081,9 @@ address {
     padding-top: 18%;
   }
 
-  /* Logo */
-  .app-footer__nav__item:first-child {
-    flex: 1 0 50%;
-    width: 50%;
-  }
+  /* #endregion */
 
+  /* #region Individual product */
 
   .product-card__hero__bg {
     position: absolute;
@@ -2084,6 +2121,10 @@ address {
     width: 26vw;
   }
 
+  /* #endregion */
+  
+  /* #region Home page */
+  
   .home-intro__card {
     width: 200px;
     height: 200px;
@@ -2093,6 +2134,9 @@ address {
     height: 350px;
   }
 
+  /* #endregion */
+
+  /* #region About page */
 
   .about-bio {
     flex-direction: row;
@@ -2103,12 +2147,18 @@ address {
     text-align: justify;
     margin-right: 2rem;
   }
+
+  /* #endregion */
 }
 
 @media (min-width: 1200px) {
+  /* #region Container */
+
   .container {
     width: 1140px;
   }
+
+  /* #endregion */
 }
 
 /* #endregion */

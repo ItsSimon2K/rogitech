@@ -1607,7 +1607,6 @@ address {
 
 .news_bg::before {
   content: '';
-  border-radius: var(--radius-2) 0;
   position: absolute;
   z-index: 1;
   top: 0;
@@ -1616,6 +1615,7 @@ address {
   height: 100%;
   background-color: var(--color-gray-900);
   opacity: 0;
+  border-radius: var(--radius-2) var(--radius-2) 0 0;
   pointer-events: none;
   transition: opacity .2s var(--ease);
 }
@@ -1626,12 +1626,12 @@ address {
 
 .news_bg::after {
   content: 'Read Post';
-  border-radius: var(--radius-2) 0;
   position: absolute;
   z-index: 2;
   top: 45%;
   left: 45%;
   opacity: 0;
+  border-radius: var(--radius-2) var(--radius-2) 0 0;
   pointer-events: none;
   transition: opacity .2s var(--ease);
 }
@@ -1656,6 +1656,7 @@ address {
   padding: 5%;
   float: left;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .news_desc p {

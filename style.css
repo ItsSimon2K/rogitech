@@ -1553,7 +1553,7 @@ address {
 
 /* #endregion */
 
-/* #region report a problem page*/
+/* #region Report a problem page*/
 
 .report_content {
   margin-bottom: 50px;
@@ -1653,6 +1653,11 @@ address {
   height: 100%;
   padding: 5%;
   float: left;
+}
+
+.news_desc p {
+ position: absolute;
+ bottom: 15%;
 }
 
 .news_desc a {

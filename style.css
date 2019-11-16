@@ -1664,6 +1664,10 @@ hr {
   color: var(--color-primary-500);
 }
 
+.contact_info_item_title {
+  font-weight: bold;
+}
+
 .hidden {
   clear: both;
 }

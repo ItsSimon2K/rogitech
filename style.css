@@ -138,10 +138,16 @@ input, select, textarea {
   border: none;
   outline: none;
   overflow: hidden;
+  transition: background-color .2s var(--ease);
 }
 
-input[type="submit"] {
+input:focus, select:focus, textarea:focus {
+  background-color: var(--color-primary-100);
+}
+
+input[type="submit"], input[type="reset"] {
   cursor: pointer;
+  font-size: .9rem;
 }
 
 fieldset {
@@ -639,11 +645,16 @@ hr {
 .btn--primary {
   color: var(--color-gray-900);
   background-color: var(--color-primary-500);
+  transition: background-color .2s var(--ease);
 }
 
 .btn--primary:hover,
 .btn--primary:focus {
   background-color: var(--color-primary-400);
+}
+
+.btn--primary:active {
+  background-color: var(--color-primary-300);
 }
 
 .btn--primary-outline {
@@ -654,10 +665,14 @@ hr {
 }
 
 .btn--primary-outline:hover,
-.btn--primary-outline:focus,
-.btn--primary-outline:active {
+.btn--primary-outline:focus {
   color: var(--color-gray-900);
   background-color: var(--color-primary-500);
+}
+
+.btn--primary-outline:active {
+  color: var(--color-gray-900);
+  background-color: var(--color-primary-300);
 }
 
 .btn--icon {
@@ -1064,6 +1079,7 @@ hr {
   max-width: 100%;
   margin: 0 auto;
   box-shadow: var(--shadow-2);
+  border-radius: var(--radius-2);
 }
 
 /* #endregion */

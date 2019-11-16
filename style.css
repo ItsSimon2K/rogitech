@@ -3,6 +3,8 @@
 /* Date: */
 /* Validated: Ok */
 
+/* NOTE: CSS variable is not supported by the CSS validator :( */
+
 /* #region Variables */
 
 :root {
@@ -71,7 +73,7 @@
 }
 
 html {
-  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Ubuntu, sans-serif;
   padding: 0;
   margin: 0;
   background-color: var(--color-gray-900);
@@ -126,7 +128,7 @@ a {
 }
 
 button {
-  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Ubuntu, sans-serif;
   display: inline-block;
   cursor: pointer;
 }
@@ -169,11 +171,11 @@ hr {
   -webkit-scrollbar-color: dark;
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
   background-color: #1c1e1f;
 }
 
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: #2a2c2e;
 }
 
@@ -1568,9 +1570,9 @@ hr {
 /* #region Contact Page */
 
 .contact_banner > h1 {
-  font-size: 28px;
   text-align: center;
   height: 150px;
+  padding-top: 50px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -1621,33 +1623,23 @@ hr {
 
 .contact_info_item {
   text-align: left;
-  list-style-type: none;
-  padding-left: 0;
+  margin: 2rem 0;
 }
 
-.contact_info_item ul {
-  list-style-type: none;
-  padding-left: 0;
-  display:inline;
+.contact_info_item i {
+  width: 36px;
 }
 
-.contact_info_item > li {
-  padding: 10% 0;
-  font-weight: bold;
-  font-size: 18px;
+.contact_info_item tr {
+  display: block;
+  padding: .5rem 0;
 }
 
-.contact_info_item ul li {  
-  margin: 10% 0;
-  font-weight: normal;
-  font-size: 16px;
-}
-
-.contact_info_item li a, .contact_info_item ul li a {
+.contact_info_item a {
   transition: color .2s var(--ease);
 }
 
-.contact_info_item li a:hover, .contact_info_item ul li a:hover {
+.contact_info_item a:hover {
   color: var(--color-primary-500);
 }
 

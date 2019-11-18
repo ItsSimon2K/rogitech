@@ -167,6 +167,8 @@ input[type="submit"],
 input[type="reset"] {
   cursor: pointer;
   font-size: .9rem;
+  /* Fix iOS default submit button */
+  -webkit-appearance: none;
 }
 
 fieldset {
@@ -699,7 +701,7 @@ hr {
 /* #region Img scroller */
 
 .img-scroller {
-  scroll-snap-type: x proximity;
+  scroll-snap-type: x mandatory;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;

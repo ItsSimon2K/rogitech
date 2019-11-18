@@ -331,7 +331,7 @@
 
       // Stop button event propagation so it doesn't trigger hero click
       const btnStop = evt => evt.stopPropagation()
-      card.querySelectorAll('.product-card__hero button').forEach(btn => btn.addEventListener('click', btnStop))
+      card.querySelectorAll('.product-card__hero button, .product-card__hero a').forEach(btn => btn.addEventListener('click', btnStop))
 
       // Toggle card
       const toggleCard = () => card.classList.contains('product-card--active') ? close() : open()

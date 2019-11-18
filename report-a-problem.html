@@ -151,72 +151,67 @@
     <div class="report_content">
       <h1 class="text-center">Report a problem</h1>
       <div class="app-card">
-        <form class="fake-load" name="report a problem" method="post" action="mailto:support@rogitech.com"
-          data-fake-load-targets=".app-card"
-          data-fake-load-classes="app-card--loading"
-        >
+        <form class="fake-load report" name="report a problem" method="post" action="mailto:support@rogitech.com"
+          data-fake-load-targets=".app-card" data-fake-load-classes="app-card--loading">
           <p class="text-center">Fill in the fields below to report your problem</p>
-          <table class="report">
-            <tr>
-              <td>
-                <label for="F_Name">First name*</label>
-              </td>
-              <td>
-                <label for="L_Name">Last name*</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input id="F_Name" type="text" required="required">
-              </td>
-              <td>
-                <input id="L_Name" type="text" required="required">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="email">E-mail*</label>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <input id="email" type="email" required="required" placeholder="john@example.com">
-              </td>
-            </tr>
-            <tr>
-              <td><br></td>
-            </tr>
-            <tr>
-              <td>
-                <label for="product-id">Product ID*</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="text" name="product-id" id="product-id" maxlength="16" required="required">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="state-the-problem">State your problem*</label>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <textarea name="problem" id="state-the-problem" required="required"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-              </td>
-              <td>
-                <input class="btn btn--primary" type="submit" value="Submit">
-                <input class="btn btn--primary-outline" type="reset">
-                
-              </td>
-            </tr>
-          </table>
+          <fieldset>
+            <legend><strong>Personal information</strong></legend>
+            <table class="report">
+              <tr>
+                <td>
+                  <label for="F_Name">First name*</label>
+                </td>
+                <td>
+                  <label for="L_Name">Last name*</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input class="report-input" id="F_Name" type="text" required="required">
+                </td>
+                <td>
+                  <input class="report-input" id="L_Name" type="text" required="required">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="email">E-mail*</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input class="report-input" id="email" type="email" required="required" placeholder="john@example.com">
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <fieldset>
+            <legend><strong>Product information</strong></legend>
+            <table class="report">
+              <tr>
+                <td>
+                  <label for="product-id">Product ID*</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="product-id" id="product-id" maxlength="16" required="required">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="state-the-problem">State your problem*</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <textarea name="problem" id="state-the-problem" required="required"></textarea>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <input class="btn btn--primary" type="submit" value="Submit">
+          <input class="btn btn--primary-outline" type="reset">
         </form>
       </div>
     </div>

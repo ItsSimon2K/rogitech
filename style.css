@@ -1178,7 +1178,7 @@ hr {
 /* #region App footer newsletter */
 
 .newsletter__header {
-  margin-top: 0;
+  display: block;
   margin-bottom: .5rem;
   font-size: 1rem;
   opacity: .8;

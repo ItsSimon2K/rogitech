@@ -1813,6 +1813,9 @@ address {
 
 .group_member_image {
 	float: left;
+	width: 250px;
+	margin-right: 25px;
+	border-radius: var(--radius-2);
 }
 
 /* #endregion */

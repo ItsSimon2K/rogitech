@@ -12,8 +12,9 @@
  */
 (() => {
   window.addEventListener('load', () => {
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const lgScreen = window.matchMedia('(min-width: 992px)')
+  
     /**
      * Dropdown helper
      * 
@@ -22,7 +23,7 @@
      */
     document.querySelectorAll('.dropdown__activator').forEach((activator) => {
       activator.addEventListener('mouseenter', () => {
-        if (document.activeElement.classList.contains('dropdown__activator') && document.activeElement !== activator) {
+        if (lgScreen.matches && document.activeElement.classList.contains('dropdown__activator') && document.activeElement !== activator) {
           document.activeElement.blur()
         }
       })
@@ -158,7 +159,7 @@
   
         fader.style.opacity = 0
   
-        if (!reducedMotion) {
+        if (!reducedMotion.matches) {
           switch (direction) {
             case 'up':
               fader.style.transform = `translate3d(0, ${move}, 0)`
@@ -188,7 +189,7 @@
      * Usage:
      * - Add `parallax` class on target img
      */
-    if (!reducedMotion && typeof simpleParallax !== 'undefined') {
+    if (!reducedMotion.matches && typeof simpleParallax !== 'undefined') {
       new simpleParallax(document.querySelectorAll('.parallax'), {
         scale: 1.1,
         delay: .3
@@ -222,7 +223,7 @@
         btn.addEventListener('click', () => {
           window.scrollTo({
             top: 0,
-            behavior: reducedMotion ? 'auto' : 'smooth'
+            behavior: reducedMotion.matches ? 'auto' : 'smooth'
           })
         })
       })

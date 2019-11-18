@@ -41,12 +41,22 @@
      * 
      * Description:
      * - Auto close active dropdown
+     * - Toggle dropdown
      */
-    document.querySelectorAll('.dropdown__activator').forEach((activator) => {
+    document.querySelectorAll('.dropdown').forEach((dropdown) => {
+      const activator = dropdown.querySelector('.dropdown__activator')
+      const menu = dropdown.querySelector('.dropdown__menu')
+
       activator.addEventListener('mouseenter', () => {
         if (lgScreen.matches && document.activeElement.classList.contains('dropdown__activator') && document.activeElement !== activator) {
+          // Next sibling should be the dropdown menu
+          document.activeElement.nextElementSibling.classList.remove('active')
           document.activeElement.blur()
         }
+      })
+
+      activator.addEventListener('click', () => {
+        menu.classList.toggle('active')
       })
     })
 

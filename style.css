@@ -996,8 +996,7 @@ hr {
   transition: opacity .2s .1s var(--ease);
 }
 
-.app-header__nav__list__item:focus .app-header__nav__list__item__menu,
-.app-header__nav__list__item:focus-within .app-header__nav__list__item__menu {
+.app-header__nav__list__item__menu.active {
   height: auto;
   opacity: 1;
   padding: .5rem;
@@ -1987,8 +1986,7 @@ address {
   }
 
   .dropdown:hover .dropdown__menu,
-  .dropdown:focus .dropdown__menu,
-  .dropdown:focus-within .dropdown__menu {
+  .dropdown__menu.active {
     opacity: 1;
     transform: rotateX(0);
     visibility: visible;

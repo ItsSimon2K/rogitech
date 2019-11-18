@@ -1556,17 +1556,28 @@ hr {
   max-width: 600px;
   border: none;
   padding: 1.5rem;
-  margin: 6px;
+  margin: 6px 0;
 	border-radius: var(--radius-3);
-	background-color: var(--color-gray-700);
+  background-color: var(--color-gray-800);
+}
+
+.main_support_button > a {
+  display: block;
 }
 
 .icon_left {
+  display: none;
+  float: left;
+  width: 150px;
   transition-duration: .2s;
 }
 
 .main_support_button:hover .icon_left {
   color: var(--color-primary-400);
+}
+
+.main_support_text {
+  float: right;
 }
 
 .main_support_heading {
@@ -1845,6 +1856,14 @@ address {
   .app-footer__nav__item:first-child {
     flex: 1 0 100%;
     width: 100%;
+  }
+
+  /* #endregion */
+
+  /* #region Support page */
+
+  .icon_left {
+    display: block;
   }
 
   /* #endregion */

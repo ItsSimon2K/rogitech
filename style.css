@@ -1328,15 +1328,16 @@ hr {
 /* #region Product page */
 
 .big_product_buttons {
-	text-align: center;
+  text-align: center;
 }
 
 .main_products_button {
   width: 400px;
+  max-width: 100%;
   height: 300px;
 	border-radius: var(--radius-3);
 	color: var(--color-gray-200);
-  margin: 6px;
+  margin: 6px 0;
   box-shadow: var(--shadow-3);
 }
 
@@ -1988,8 +1989,8 @@ address {
   }
 
   .dropdown:hover .dropdown__menu,
- .dropdown:focus .dropdown__menu,
- .dropdown:focus-within .dropdown__menu {
+  .dropdown:focus .dropdown__menu,
+  .dropdown:focus-within .dropdown__menu {
     opacity: 1;
     transform: rotateX(0);
     visibility: visible;
@@ -2056,6 +2057,14 @@ address {
 
   .home-showcase__item {
     height: 350px;
+  }
+
+  /* #endregion */
+
+  /* #region Products page */
+
+  .main_products_button {
+    margin: 6px;
   }
 
   /* #endregion */

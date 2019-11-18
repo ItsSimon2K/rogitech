@@ -16,6 +16,27 @@
     const lgScreen = window.matchMedia('(min-width: 992px)')
   
     /**
+     * App nav
+     * 
+     * Description:
+     * - Toggles `active` class when click on burger
+     */
+    document.querySelectorAll('.app-header__nav').forEach((nav) => {
+      const burger = nav.querySelector('.app-header__nav__burger')
+      const menu = nav.querySelector('.app-header__nav__list')
+
+      burger.addEventListener('click', () => {
+        menu.classList.toggle('active')
+      })
+
+      document.addEventListener('click', (evt) => {
+        if (evt.target !== burger && !burger.contains(evt.target) && evt.target !== menu && !menu.contains(evt.target)) {
+          menu.classList.remove('active')
+        }
+      })
+    })
+
+    /**
      * Dropdown helper
      * 
      * Description:

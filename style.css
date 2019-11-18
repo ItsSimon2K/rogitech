@@ -919,10 +919,6 @@ hr {
   margin: 0 .25rem;
 }
 
-/* .app-header__nav {
-
-} */
-
 .app-header__nav__burger {
   font-size: 1.1rem;
   margin: .5rem 0;
@@ -950,6 +946,7 @@ hr {
 
 .app-header__nav__burger:focus ~ .app-header__nav__list,
 .app-header__nav__burger:active ~ .app-header__nav__list,
+.app-header__nav__list.active,
 .app-header__nav__list:focus-within {
   opacity: 1;
   visibility: visible;

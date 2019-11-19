@@ -4,12 +4,12 @@
 <head>
   <!-- Description: Rogitech about page -->
   <!-- Author: Bjorn Lu -->
-  <!-- Date:  -->
-  <!-- Validated: Ok -->
+  <!-- Date: 20 November 2019 -->
+  <!-- Validated: Ok 20 November 2019 -->
   <meta charset='utf-8'>
   <meta name="author" content="Bjorn Lu">
   <meta name="description" content="Rogitech">
-  <meta name="keywords" content="rogitech">
+  <meta name="keywords" content="rogitech, about">
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
@@ -25,19 +25,24 @@
 <body>
   <header class="app-header">
     <div class="container">
+      <!-- Logo link -->
       <a class="app-header__logo" href="index.html">
         <img src="images/logo_icon.svg" alt="Logo icon" height="28">
         <img src="images/logo_name.svg" alt="Logo name" height="22">
       </a>
       <nav class="app-header__nav">
+        <!-- Mobile hamburger menu button -->
         <button class="app-header__nav__burger btn btn--icon" aria-label="Toggle hamburger menu">
           <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
+        <!-- Navigation list -->
         <ul class="app-header__nav__list">
           <li class="app-header__nav__list__item dropdown">
+            <!-- Products dropdown button -->
             <button class="app-header__nav__list__item__link dropdown__activator">
               Products <i class="fas fa-caret-down" aria-hidden="true"></i>
             </button>
+            <!-- Products dropdown -->
             <ul class="app-header__nav__list__item__menu dropdown__menu list">
               <li>
                 <a class="list__item list__item--hoverable" href="mouse.html">
@@ -98,9 +103,11 @@
             </a>
           </li>
           <li class="app-header__nav__list__item dropdown">
+            <!-- Support dropdown button -->
             <button class="app-header__nav__list__item__link dropdown__activator">
               Support <i class="fas fa-caret-down" aria-hidden="true"></i>
             </button>
+            <!-- Support dropdown -->
             <div class="app-header__nav__list__item__menu dropdown__menu list">
               <a class="list__item list__item--hoverable" href="warranty-info.html">
                 <div class="list__item__avatar">
@@ -146,6 +153,7 @@
     </div>
   </header>
   <article>
+    <!-- Header title section -->
     <section class="about-header hero hero--darken">
       <div class="hero__bg">
         <!-- https://unsplash.com/photos/g1Kr4Ozfoac -->
@@ -155,13 +163,16 @@
         <h1>About us</h1>
       </div>
     </section>
+    <!-- Description section -->
     <section class="container my-3">
       <h2>Rogitech Technologies</h2>
       <div class="about-bio">
         <div class="about-bio__left">
           <p>
-            Rogitech was founded by <strong>Bram Bakker</strong> and <strong>Luuk Jansen</strong> in Amsterdam, Netherlands.
-            It is one of the top gaming accessories manufacturers since 2016. With its recent market expansion, it now has over
+            Rogitech was founded by <strong>Bram Bakker</strong> and <strong>Luuk Jansen</strong> in Amsterdam,
+            Netherlands.
+            It is one of the top gaming accessories manufacturers since 2016. With its recent market expansion, it now
+            has over
             <strong>500 stores worldwide</strong> and ships to all countries around the world.
           </p>
           <p>
@@ -170,12 +181,14 @@
             product, only the best make the cut.
           </p>
         </div>
+        <!-- Logo -->
         <figure class="about-bio__right">
           <img src="images/logo_name.svg" alt="Logo name" height="60">
           <figcaption>Rogitech logo</figcaption>
         </figure>
       </div>
     </section>
+    <!-- CEO quote section -->
     <section class="about-ceo hero hero--darken my-3">
       <div class="hero__bg">
         <!-- https://unsplash.com/photos/UiVe5QvOhao -->
@@ -183,7 +196,9 @@
       </div>
       <div class="hero__content container row row--center h-full">
         <div class="about-quote">
+          <!-- Quote icon -->
           <i class="about-quote__icon fas fa-quote-left fa-3x" aria-hidden="true"></i>
+          <!-- The quote -->
           <figure class="about-quote__quote blockquote col">
             <blockquote class="blockquote__quote">
               At Rogitech, we constantly push technology forward.
@@ -196,6 +211,7 @@
         </div>
       </div>
     </section>
+    <!-- Motto section -->
     <section class="container text-center my-3">
       <h2>Our motto</h2>
       <div class="about-motto__card mini-card mini-card--transparent fader">
@@ -224,6 +240,7 @@
       </div>
       <hr>
     </section>
+    <!-- Employee section -->
     <section class="container text-center my-3">
       <h2>Our team</h2>
       <p>Teamwork makes Rogitech possible</p>
@@ -282,16 +299,18 @@
       <div class="app-footer__nav">
         <div class="app-footer__nav__item">
           <h5>
+            <!-- Logo link -->
             <a href="index.html">
               <img src="images/logo_icon.svg" alt="Logo icon" height="28">
               <img src="images/logo_name.svg" alt="Logo name" height="22">
             </a>
           </h5>
+          <!-- Newsletter form -->
           <div class="newsletter">
             <label class="newsletter__header" for="newsletter-email">Get the latest news and deals!</label>
             <form class="newsletter__form" name="newsletter" action="mailto:news@rogitech.com">
-              <input id="newsletter-email" class="newsletter__form__email" type="email" name="email" size="20" placeholder="john@example.com"
-                required="required">
+              <input id="newsletter-email" class="newsletter__form__email" type="email" name="email" size="20"
+                placeholder="john@example.com" required="required">
               <input class="newsletter__form__button" type="submit" value="Subscribe">
             </form>
           </div>
@@ -345,6 +364,7 @@
         </span>
       </div>
     </div>
+    <!-- Scroll to top button -->
     <div class="scroll-top-btn-container container">
       <button class="scroll-top-btn" title="Scroll to top">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>

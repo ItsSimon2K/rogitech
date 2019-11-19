@@ -4,12 +4,12 @@
 <head>
   <!-- Description: Rogitech warranty info page -->
   <!-- Author: Bjorn Lu -->
-  <!-- Date:  -->
-  <!-- Validated: Ok -->
+  <!-- Date: 20 November 2019 -->
+  <!-- Validated: Ok 20 November 2019 -->
   <meta charset='utf-8'>
   <meta name="author" content="Bjorn Lu">
   <meta name="description" content="Rogitech">
-  <meta name="keywords" content="rogitech">
+  <meta name="keywords" content="rogitech, warranty">
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
@@ -25,19 +25,24 @@
 <body>
   <header class="app-header">
     <div class="container">
+      <!-- Logo link -->
       <a class="app-header__logo" href="index.html">
         <img src="images/logo_icon.svg" alt="Logo icon" height="28">
         <img src="images/logo_name.svg" alt="Logo name" height="22">
       </a>
       <nav class="app-header__nav">
+        <!-- Mobile hamburger menu button -->
         <button class="app-header__nav__burger btn btn--icon" aria-label="Toggle hamburger menu">
           <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
+        <!-- Navigation list -->
         <ul class="app-header__nav__list">
           <li class="app-header__nav__list__item dropdown">
+            <!-- Products dropdown button -->
             <button class="app-header__nav__list__item__link dropdown__activator">
               Products <i class="fas fa-caret-down" aria-hidden="true"></i>
             </button>
+            <!-- Products dropdown -->
             <ul class="app-header__nav__list__item__menu dropdown__menu list">
               <li>
                 <a class="list__item list__item--hoverable" href="mouse.html">
@@ -98,9 +103,11 @@
             </a>
           </li>
           <li class="app-header__nav__list__item dropdown">
+            <!-- Support dropdown button -->
             <button class="app-header__nav__list__item__link dropdown__activator">
               Support <i class="fas fa-caret-down" aria-hidden="true"></i>
             </button>
+            <!-- Support dropdown -->
             <div class="app-header__nav__list__item__menu dropdown__menu list">
               <a class="list__item list__item--hoverable" href="warranty-info.html">
                 <div class="list__item__avatar">
@@ -148,10 +155,9 @@
   <article class="container my-4">
     <h1 class="text-center">Warranty info</h1>
     <div class="app-card">
-      <form class="fake-load" name="warranty" action="mailto:support@rogitech.com"
-        data-fake-load-targets=".app-card"
-        data-fake-load-classes="app-card--loading"
-      >
+      <!-- Warranty form -->
+      <form class="fake-load" name="warranty" action="mailto:support@rogitech.com" data-fake-load-targets=".app-card"
+        data-fake-load-classes="app-card--loading">
         <p class="text-center">Fill in the fields below to check warranty</p>
         <table>
           <tr>
@@ -161,6 +167,7 @@
           </tr>
           <tr>
             <td>
+              <!-- List of countries -->
               <select name="country" id="country" required="required">
                 <option value="" selected="selected" disabled="disabled">Select a country</option>
                 <option value="Afghanistan">Afghanistan</option>
@@ -292,7 +299,8 @@
                 <option value="Lithuania">Lithuania</option>
                 <option value="Luxembourg">Luxembourg</option>
                 <option value="Macao">Macao</option>
-                <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of
+                </option>
                 <option value="Madagascar">Madagascar</option>
                 <option value="Malawi">Malawi</option>
                 <option value="Malaysia">Malaysia</option>
@@ -365,7 +373,8 @@
                 <option value="Solomon Islands">Solomon Islands</option>
                 <option value="Somalia">Somalia</option>
                 <option value="South Africa">South Africa</option>
-                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich
+                  Islands</option>
                 <option value="Spain">Spain</option>
                 <option value="Sri Lanka">Sri Lanka</option>
                 <option value="Sudan">Sudan</option>
@@ -431,6 +440,7 @@
           <tr>
             <td class="text-right">
               <br>
+              <!-- Text to show after fake load -->
               <span class="fake-load__result warranty-result">
                 <i class="fas fa-check" aria-hidden="true"></i>
                 Warranty valid
@@ -448,16 +458,18 @@
       <div class="app-footer__nav">
         <div class="app-footer__nav__item">
           <h5>
+            <!-- Logo link -->
             <a href="index.html">
               <img src="images/logo_icon.svg" alt="Logo icon" height="28">
               <img src="images/logo_name.svg" alt="Logo name" height="22">
             </a>
           </h5>
+          <!-- Newsletter form -->
           <div class="newsletter">
             <label class="newsletter__header" for="newsletter-email">Get the latest news and deals!</label>
             <form class="newsletter__form" name="newsletter" action="mailto:news@rogitech.com">
-              <input id="newsletter-email" class="newsletter__form__email" type="email" name="email" size="20" placeholder="john@example.com"
-                required="required">
+              <input id="newsletter-email" class="newsletter__form__email" type="email" name="email" size="20"
+                placeholder="john@example.com" required="required">
               <input class="newsletter__form__button" type="submit" value="Subscribe">
             </form>
           </div>
@@ -511,6 +523,7 @@
         </span>
       </div>
     </div>
+    <!-- Scroll to top button -->
     <div class="scroll-top-btn-container container">
       <button class="scroll-top-btn" title="Scroll to top">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>

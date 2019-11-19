@@ -4,8 +4,8 @@
 <head>
   <!-- Description: Rogitech home page -->
   <!-- Author: Bjorn Lu -->
-  <!-- Date:  -->
-  <!-- Validated: Ok -->
+  <!-- Date: 20 November 2019 -->
+  <!-- Validated: Ok 20 November 2019 -->
   <meta charset='utf-8'>
   <meta name="author" content="Bjorn Lu">
   <meta name="description" content="Rogitech">
@@ -25,19 +25,24 @@
 <body>
   <header class="app-header">
     <div class="container">
+      <!-- Logo link -->
       <a class="app-header__logo" href="index.html">
         <img src="images/logo_icon.svg" alt="Logo icon" height="28">
         <img src="images/logo_name.svg" alt="Logo name" height="22">
       </a>
       <nav class="app-header__nav">
+        <!-- Mobile hamburger menu button -->
         <button class="app-header__nav__burger btn btn--icon" aria-label="Toggle hamburger menu">
           <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
+        <!-- Navigation list -->
         <ul class="app-header__nav__list">
           <li class="app-header__nav__list__item dropdown">
+            <!-- Products dropdown button -->
             <button class="app-header__nav__list__item__link dropdown__activator">
               Products <i class="fas fa-caret-down" aria-hidden="true"></i>
             </button>
+            <!-- Products dropdown -->
             <ul class="app-header__nav__list__item__menu dropdown__menu list">
               <li>
                 <a class="list__item list__item--hoverable" href="mouse.html">
@@ -98,9 +103,11 @@
             </a>
           </li>
           <li class="app-header__nav__list__item dropdown">
+            <!-- Support dropdown button -->
             <button class="app-header__nav__list__item__link dropdown__activator">
               Support <i class="fas fa-caret-down" aria-hidden="true"></i>
             </button>
+            <!-- Support dropdown -->
             <div class="app-header__nav__list__item__menu dropdown__menu list">
               <a class="list__item list__item--hoverable" href="warranty-info.html">
                 <div class="list__item__avatar">
@@ -146,6 +153,7 @@
     </div>
   </header>
   <article>
+    <!-- Carousel section -->
     <section>
       <div class="carousel carousel--full" data-carousel-auto-slide-interval="5000">
         <div class="carousel__controls">
@@ -157,11 +165,11 @@
           </button>
         </div>
         <div class="carousel__view">
+          <!-- Mouse slide -->
           <div class="carousel__view__slide">
             <div class="carousel__view__slide__bg">
               <!-- https://unsplash.com/photos/xo-MJALGPrI -->
-              <img class="carousel__view__slide__bg__img" src="images/mouse1.jpg"
-                alt="Mouse hero image">
+              <img class="carousel__view__slide__bg__img" src="images/mouse1.jpg" alt="Mouse hero image">
             </div>
             <div class="carousel__view__slide__content">
               <div class="container">
@@ -172,11 +180,11 @@
               </div>
             </div>
           </div>
+          <!-- Keyboard slide -->
           <div class="carousel__view__slide">
             <div class="carousel__view__slide__bg">
               <!-- https://unsplash.com/photos/WzKPT0IuUrU -->
-              <img class="carousel__view__slide__bg__img" src="images/keyboard1.jpg"
-                alt="Keyboard hero image">
+              <img class="carousel__view__slide__bg__img" src="images/keyboard1.jpg" alt="Keyboard hero image">
             </div>
             <div class="carousel__view__slide__content">
               <div class="container">
@@ -187,11 +195,11 @@
               </div>
             </div>
           </div>
+          <!-- Headset slide -->
           <div class="carousel__view__slide">
             <div class="carousel__view__slide__bg">
               <!-- https://unsplash.com/photos/nuW1WqqDzsU -->
-              <img class="carousel__view__slide__bg__img" src="images/headset1.jpg"
-                alt="Headset hero image">
+              <img class="carousel__view__slide__bg__img" src="images/headset1.jpg" alt="Headset hero image">
             </div>
             <div class="carousel__view__slide__content">
               <div class="container">
@@ -205,12 +213,15 @@
         </div>
       </div>
     </section>
+    <!-- Intro section -->
     <section class="container my-4 text-center">
       <h2 class="fader">Explore a World-class Gaming Experience</h2>
       <p class="fader">We forge only the best gaming rigs. Get yours today.</p>
       <div class="container my-4">
         <div class="row row--center row--gutter-1">
-          <a class="home-intro__card mini-card mini-card--transparent mini-card--hover mini-card--darken" href="mouse.html">
+          <!-- Mouse card -->
+          <a class="home-intro__card mini-card mini-card--transparent mini-card--hover mini-card--darken"
+            href="mouse.html">
             <div class="mini-card__bg">
               <!-- https://www.logitechg.com/en-my/products/gaming-mice/g403-hero-gaming-mouse.html -->
               <img class="mini-card__bg__img" src="images/mouse2.jpeg" alt="Gaming mouse">
@@ -219,7 +230,9 @@
               <h3>Mouse</h3>
             </div>
           </a>
-          <a class="home-intro__card mini-card mini-card--transparent mini-card--hover mini-card--darken" href="keyboard.html">
+          <!-- Keyboard card -->
+          <a class="home-intro__card mini-card mini-card--transparent mini-card--hover mini-card--darken"
+            href="keyboard.html">
             <div class="mini-card__bg">
               <!-- https://www.logitechg.com/en-my/products/gaming-keyboards/g413-mechanical-gaming-keyboard.html -->
               <img class="mini-card__bg__img" src="images/keyboard2.jpeg" alt="Gaming keyboard">
@@ -228,7 +241,9 @@
               <h3>Keyboard</h3>
             </div>
           </a>
-          <a class="home-intro__card mini-card mini-card--transparent mini-card--hover mini-card--darken" href="headset.html">
+          <!-- Headset card -->
+          <a class="home-intro__card mini-card mini-card--transparent mini-card--hover mini-card--darken"
+            href="headset.html">
             <div class="mini-card__bg">
               <!-- https://www.logitechg.com/en-my/products/gaming-audio/g933s-wireless-7-1-surround-sound-lightsync-gaming-headset.html -->
               <img class="mini-card__bg__img" src="images/headset2.jpg" alt="Gaming headset">
@@ -237,7 +252,9 @@
               <h3>Headset</h3>
             </div>
           </a>
-          <a class="home-intro__card mini-card mini-card--transparent mini-card--hover mini-card--darken" href="speaker.html">
+          <!-- Speaker card -->
+          <a class="home-intro__card mini-card mini-card--transparent mini-card--hover mini-card--darken"
+            href="speaker.html">
             <div class="mini-card__bg">
               <!-- https://www.logitech.com/en-my/product/multimedia-speakers-z213?crid=47 -->
               <img class="mini-card__bg__img" src="images/speaker2.jpg" alt="Gaming speaker">
@@ -254,6 +271,7 @@
       </div>
     </section>
     <br>
+    <!-- Showcase section -->
     <section class="container my-4">
       <div class="home-showcase__item">
         <div class="home-showcase__item__pic">
@@ -295,6 +313,7 @@
         </div>
       </div>
     </section>
+    <!-- Partners section -->
     <section class="hero hero--darken my-3 carousel--full">
       <div class="hero__bg">
         <!-- https://unsplash.com/photos/nuW1WqqDzsU -->
@@ -304,6 +323,7 @@
         <h2 class="col-6 fader">
           Trusted by major eSports organizers and gaming communities
         </h2>
+        <!-- Partner logos -->
         <div class="col-6 my-2">
           <div class="row row--center row--gutter-2 fader">
             <div>
@@ -334,6 +354,7 @@
         </div>
       </div>
     </section>
+    <!-- Disclaimer section -->
     <section class="container my-3">
       <p>
         Disclaimer: This website is created for education and non-commercial use only. It is an assignment for
@@ -347,16 +368,18 @@
       <div class="app-footer__nav">
         <div class="app-footer__nav__item">
           <h5>
+            <!-- Logo link -->
             <a href="index.html">
               <img src="images/logo_icon.svg" alt="Logo icon" height="28">
               <img src="images/logo_name.svg" alt="Logo name" height="22">
             </a>
           </h5>
+          <!-- Newsletter form -->
           <div class="newsletter">
             <label class="newsletter__header" for="newsletter-email">Get the latest news and deals!</label>
             <form class="newsletter__form" name="newsletter" action="mailto:news@rogitech.com">
-              <input id="newsletter-email" class="newsletter__form__email" type="email" name="email" size="20" placeholder="john@example.com"
-                required="required">
+              <input id="newsletter-email" class="newsletter__form__email" type="email" name="email" size="20"
+                placeholder="john@example.com" required="required">
               <input class="newsletter__form__button" type="submit" value="Subscribe">
             </form>
           </div>
@@ -410,6 +433,7 @@
         </span>
       </div>
     </div>
+    <!-- Scroll to top button -->
     <div class="scroll-top-btn-container container">
       <button class="scroll-top-btn" title="Scroll to top">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>

@@ -1156,6 +1156,15 @@ hr {
   text-align: center;
 }
 
+.app-footer__credits__link {
+  color: var(--color-primary-100);
+  transition: color .2s var(--ease);
+}
+
+.app-footer__credits__link:hover {
+  color: var(--color-primary-500);
+}
+
 /* #endregion */
 
 /* #region App footer newsletter */

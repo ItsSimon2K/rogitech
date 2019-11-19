@@ -164,17 +164,12 @@ hr {
 
 /* #region Scrollbar */
 
-* {
-  scrollbar-color: #2a2c2e #1c1e1f;
-  scrollbar-color: dark;
-  -webkit-scrollbar-color: dark;
-}
-
-*::-webkit-scrollbar {
+/* Make dark to fit theme */
+::-webkit-scrollbar {
   background-color: #1c1e1f;
 }
 
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: #2a2c2e;
 }
 
@@ -1807,7 +1802,6 @@ address {
 }
 
 .star_rating {
-  float: center;
   height: 46px;
 }
 

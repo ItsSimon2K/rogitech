@@ -1806,11 +1806,25 @@ address {
 
 /* #region Developer page */
 
+.developer_card {
+  margin: 1rem 0;
+}
+
+.developer_card figure {
+  margin: 0;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
 .group_member_image {
-	float: left;
 	width: 250px;
-	margin-right: 25px;
+  margin-bottom: 25px;
 	border-radius: var(--radius-2);
+}
+
+.developer_card__desc {
+  clear: both;
 }
 
 /* #endregion */
@@ -1936,6 +1950,23 @@ address {
   .news_desc p {
     position: absolute;
     bottom: 15%;
+  }
+
+  /* #endregion */
+
+  /* #region Developer page */
+
+  .developer_card figure {
+    width: auto;
+  }
+
+  .group_member_image {
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+
+  .developer_card__desc {
+    clear: none;
   }
 
   /* #endregion */

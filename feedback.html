@@ -160,8 +160,10 @@
   <article class="container my-4">
     <h1 class="text-center">Submit feedback</h1>
     <div class="app-card card">
+	  <!-- Feedback form -->
       <form name="feedback form" action="mailto:feedback@rogitech.com">
         <p class="text-center">Fill in the fields below to submit feedback</p>
+		<!-- Type of information -->
         <fieldset class="my-1">
           <legend><strong>Personal Information</strong></legend>
           <table class="feedback_table">
@@ -173,6 +175,7 @@
                 <label for="lname">Last name*</label>
               </td>
             </tr>
+			<!-- Inputting name details -->
             <tr>
               <td>
                 <input type="text" name="first name" required="required" id="fname" class="ftextarea">
@@ -188,12 +191,14 @@
             </tr>
             <tr>
               <td colspan="2">
+				<!-- Inputting email -->
                 <input type="email" name="email" required="required" placeholder="john@example.com" id="email"
                   class="ftextarea"><br>
               </td>
             </tr>
           </table>
         </fieldset>
+		<!-- Type of information -->
         <fieldset class="my-1">
           <legend><strong>Feedback Information</strong></legend>
           <table class="feedback_table">
@@ -204,6 +209,7 @@
             </tr>
             <tr>
               <td>
+				<!-- Rating services -->
                 <div class="star_rating">
                   <input type="radio" id="star1" name="rate" value="5">
                   <label for="star1">1 star</label>
@@ -225,6 +231,7 @@
             </tr>
             <tr>
               <td>
+				<!-- Type of feedback -->
                 <select id="ftype" name="feedback_type" class="ftextarea">
                   <option value="comment">Comment</option>
                   <option value="question">Question</option>
@@ -239,11 +246,13 @@
             </tr>
             <tr>
               <td>
+				<!-- Describing feedback -->
                 <textarea name="describe feedback" rows="8" cols="70" id="fdescribe" class="ftextarea"></textarea>
               </td>
             </tr>
           </table>
         </fieldset>
+		<!-- Submit and Reset buttons -->
         <div>
           <input type="submit" value="Submit" class="fsubmit btn btn--primary">
           <input type="reset" value="Reset" class="freset btn btn--primary-outline">

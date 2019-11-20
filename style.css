@@ -1821,8 +1821,8 @@ address {
 }
 
 .group_member_image {
-	width: 250px;
-  margin-bottom: 25px;
+	width: 300px;
+	margin-bottom: 25px;
 	border-radius: var(--radius-2);
 }
 
